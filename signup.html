@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PathFinder | Sign Up</title>
+
+		<link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+		<link rel="stylesheet" href="./general.css" />
+		<link rel="stylesheet" href="./sign.css" />
+	</head>
+	<body>
+		<img
+			src="./images/logo.svg"
+			alt="PathFinder Logo"
+			class="logo logo--greeting"
+		/>
+		<main>
+			<div class="sign-box">
+				<div class="greeting">
+					<h2 class="heading heading--greeting">Hi, There!</h2>
+					<p class="greeting-text">
+						Enter your personal details and start your journey with us 🚀
+					</p>
+					<p class="greeting-if">
+						Already have an account?
+						<a class="if-link" href="./signin.html">Sign In</a>
+					</p>
+				</div>
+				<div class="form-container">
+					<div class="form-textbox">
+						<h1 class="heading heading--form">Create Account</h1>
+						<div class="socials">
+							<a href="#" class="social-link">
+								<i class="fab fa-facebook-f"></i>
+							</a>
+							<a href="" class="social-link">
+								<i class="fab fa-google"></i>
+							</a>
+						</div>
+						<p class="form-text">Or use your email for registration</p>
+					</div>
+					<form class="sign-form">
+						<label class="sign-label" for="first-name">
+							<input
+								type="text"
+								class="sign-input"
+								name="fname"
+								id="first-name"
+								placeholder="First Name"
+								autocomplete="given-name"
+								required
+							/>
+						</label>
+						<label class="sign-label" for="last-name">
+							<input
+								type="text"
+								class="sign-input"
+								name="lname"
+								id="last-name"
+								placeholder="Last Name"
+								autocomplete="family-name"
+								required
+							/>
+						</label>
+						<label class="sign-label" for="email">
+							<input
+								type="email"
+								class="sign-input"
+								name="email"
+								id="email"
+								placeholder="Email"
+								autocomplete="email"
+								required
+							/>
+						</label>
+
+						<label for="password1" class="sign-label">
+							<input
+								type="password"
+								class="sign-input"
+								name="pswd"
+								id="password1"
+								placeholder="Enter Password"
+								pattern="[0-9A-Za-z] "
+								required
+							/>
+						</label>
+
+						<label for="checkbox" class="sign-label--check">
+							<input
+								type="checkbox"
+								class="sign-check"
+								name="agree"
+								id="checkbox"
+								required
+							/>
+							<p>
+								I agree to the
+								<a href="#" class="check-link">Terms And Conditions of Use</a>
+							</p>
+						</label>
+
+						<button type="submit" onclick="submitForm()" class="btn btn--form">
+							Sign Up
+						</button>
+					</form>
+				</div>
+			</div>
+		</main>
+		<script
+			src="https://kit.fontawesome.com/2487134076.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="./sign.js"></script>
+	</body>
+</html>

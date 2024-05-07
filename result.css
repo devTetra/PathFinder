@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  position: relative;
+}
+
+.logo-container {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.logo {
+  height: 3.2rem;
+}
+
+.result-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding: 6.4rem;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.4rem;
+}
+
+.subheading {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  color: #0802b0;
+}
+
+.heading--result {
+  font-size: 3.6rem;
+  color: var(--primary-colour);
+}
+
+.result-description {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-top: 1.6rem;
+}
+
+.img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4.8rem;
+}
+
+.career-img {
+  width: 75%;
+}

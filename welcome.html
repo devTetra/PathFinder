@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PathFinder - Unlock Your Potential</title>
+
+		<link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+		<link rel="stylesheet" href="./general.css" />
+		<link rel="stylesheet" href="./welcome.css" />
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<h1 class="heading heading--welcome">
+					Hello <span class="user-name">Username</span>
+				</h1>
+				<p class="welcome-text">
+					Ready to dive in? Let's kickstart your career exploration journey!
+					Click the button below to start your personalized assessment and
+					unlock insights that will shape your professional future.
+				</p>
+				<a href="./test.html" class="btn btn--cta">Start Test</a>
+			</div>
+		</main>
+
+		<script>
+			let Username = document.querySelector('.user-name');
+			let urlParams = new URLSearchParams(window.location.search);
+			let firstName = urlParams.get('firstName');
+
+			Username.textContent = firstName;
+		</script>
+	</body>
+</html>

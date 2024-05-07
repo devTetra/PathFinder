@@ -1,0 +1,112 @@
+body {
+  background-image: url(./images/Colored\ Patterns.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main {
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.test-container {
+  background-color: rgba(247, 247, 247, 0.9);
+  backdrop-filter: blur(5px);
+  border-radius: 14px;
+  width: 60vw;
+  height: 80vh;
+  overflow: hidden;
+  padding: 8.4rem 6.4rem 4.8rem;
+  position: relative;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1)
+}
+
+.test-slide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: start;
+  border: none;
+}
+
+.subheading {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  color: #0802b0;
+}
+
+.heading--tertiary {
+  font-size: 3rem;
+  margin-bottom: 1.2rem;
+  color: var(--primary-colour);
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.input-text {
+  font-size: 2rem;
+}
+
+input[type="radio"] {
+  width: 1.8rem;
+  height: 1.8rem;
+  accent-color: var(--primary-colour);
+  cursor: pointer;
+}
+
+.btn-container {
+  margin-top: 4.8rem;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 2.4rem;
+  width: 100%;
+}
+
+.btn-container div {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.btn {
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.btn--prev,
+.btn--next {
+  background-color: inherit;
+  border: 1.5px solid var(--primary-colour);
+  color: var(--primary-colour);
+  border-radius: 100px;
+}
+
+.btn--prev:hover,
+.btn--next:hover {
+  background-color: initial;
+}
+
+.btn--prev:disabled,
+.btn--next:disabled {
+  background-color: #bebcd8;
+  border-color: #8e8da6;
+  color: #fff;
+  cursor: initial;
+}
+
+.btn--prev:disabled.btn--prev:hover,
+.btn--next:disabled.btn--next:hover {
+  font-weight: initial;
+}

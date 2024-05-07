@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PathFinder | Test</title>
+
+		<link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+		<link rel="stylesheet" href="./general.css" />
+		<link rel="stylesheet" href="./test.css" />
+	</head>
+	<body>
+		<main>
+			<form
+				onsubmit="findCareer(); return false;"
+				action="javascript:void(0);"
+				class="test-container"
+			>
+				<fieldset class="test-slide" id="slide1">
+					<p class="subheading">Career Style Test</p>
+					<h3 class="heading heading--tertiary">
+						What type of activities do you find most interesting?
+					</h3>
+					<label for="radio--1a" class="inputs">
+						<input type="radio" name="question-1" value="3" id="radio--1a" />
+						<p class="input-text">
+							Organizing and managing projects or businesses
+						</p>
+					</label>
+					<label for="radio--1b" class="inputs">
+						<input type="radio" name="question-1" value="2" id="radio--1b" />
+						<p class="input-text">
+							Advocating for justice and making a positive impact on society
+						</p>
+					</label>
+					<label for="radio--1c" class="inputs">
+						<input type="radio" name="question-1" value="1" id="radio--1c" />
+						<p class="input-text">
+							Expressing creativity through art and entertainment
+						</p>
+					</label>
+					<label for="radio--1d" class="inputs">
+						<input type="radio" name="question-1" value="5" id="radio--1d" />
+						<p class="input-text">
+							Helping others improve their health and well-being.
+						</p>
+					</label>
+					<label for="radio--1e" class="inputs">
+						<input type="radio" name="question-1" value="4" id="radio--1e" />
+						<p class="input-text">
+							Exploring and understanding scientific principles
+						</p>
+					</label>
+				</fieldset>
+
+				<fieldset class="test-slide" id="slide2">
+					<p class="subheading">Career Style Test</p>
+					<h3 class="heading heading--tertiary">
+						How do you prefer to solve problems?
+					</h3>
+					<label for="radio--2a" class="inputs">
+						<input type="radio" name="question-2" value="4" id="radio--2a" />
+						<p class="input-text">
+							Applying logical reasoning and scientific methods
+						</p>
+					</label>
+					<label for="radio--2b" class="inputs">
+						<input type="radio" name="question-2" value="2" id="radio--2b" />
+						<p class="input-text">Considering legal and ethical implications</p>
+					</label>
+					<label for="radio--2c" class="inputs">
+						<input type="radio" name="question-2" value="1" id="radio--2c" />
+						<p class="input-text">Thinking creatively and outside the box</p>
+					</label>
+					<label for="radio--2d" class="inputs">
+						<input type="radio" name="question-2" value="5" id="radio--2d" />
+						<p class="input-text">
+							Analyzing symptoms and finding medical solutions.
+						</p>
+					</label>
+					<label for="radio--2e" class="inputs">
+						<input type="radio" name="question-2" value="3" id="radio--2e" />
+						<p class="input-text">
+							Developing strategic plans and making decisions
+						</p>
+					</label>
+				</fieldset>
+
+				<fieldset class="test-slide" id="slide3">
+					<p class="subheading">Career Style Test</p>
+					<h3 class="heading heading--tertiary">
+						What type of work environment appeals to you the most?
+					</h3>
+					<label for="radio--3a" class="inputs">
+						<input type="radio" name="question-3" value="4" id="radio--3a" />
+						<p class="input-text">
+							Laboratories, research institutions, or tech companies
+						</p>
+					</label>
+					<label for="radio--3b" class="inputs">
+						<input type="radio" name="question-3" value="1" id="radio--3b" />
+						<p class="input-text">Art studios, theaters, or creative spaces</p>
+					</label>
+					<label for="radio--3c" class="inputs">
+						<input type="radio" name="question-3" value="5" id="radio--3c" />
+						<p class="input-text">Hospitals, clinics, or healthcare settings</p>
+					</label>
+					<label for="radio--3d" class="inputs">
+						<input type="radio" name="question-3" value="3" id="radio--3d" />
+						<p class="input-text">
+							Offices, boardrooms, or entrepreneurial ventures
+						</p>
+					</label>
+					<label for="radio--3e" class="inputs">
+						<input type="radio" name="question-3" value="2" id="radio--3e" />
+						<p class="input-text">
+							Law firms, government agencies, or public service organizations
+						</p>
+					</label>
+				</fieldset>
+
+				<fieldset class="test-slide" id="slide4">
+					<p class="subheading">Career Style Test</p>
+					<h3 class="heading heading--tertiary">
+						How do you handle challenges or high-pressure situations?
+					</h3>
+					<label for="radio--4a" class="inputs">
+						<input type="radio" name="question-4" value="5" id="radio--4a" />
+						<p class="input-text">Stay calm and focused on finding solutions</p>
+					</label>
+					<label for="radio--4b" class="inputs">
+						<input type="radio" name="question-4" value="4" id="radio--4b" />
+						<p class="input-text">Analyze data and apply scientific methods</p>
+					</label>
+					<label for="radio--4c" class="inputs">
+						<input type="radio" name="question-4" value="2" id="radio--4c" />
+						<p class="input-text">
+							Evaluate legal implications and consider ethical aspects
+						</p>
+					</label>
+					<label for="radio--4d" class="inputs">
+						<input type="radio" name="question-4" value="3" id="radio--4d" />
+						<p class="input-text">Take charge and make decisive decisions</p>
+					</label>
+					<label for="radio--4e" class="inputs">
+						<input type="radio" name="question-4" value="1" id="radio--4e" />
+						<p class="input-text">
+							Embrace creativity to find unique approaches
+						</p>
+					</label>
+				</fieldset>
+
+				<fieldset class="test-slide" id="slide5">
+					<p class="subheading">Career Style Test</p>
+					<h3 class="heading heading--tertiary">
+						What is your long-term career goal?
+					</h3>
+					<label for="radio--5a" class="inputs">
+						<input type="radio" name="question-5" value="5" id="radio--5a" />
+						<p class="input-text">Becoming a healthcare professional</p>
+					</label>
+					<label for="radio--5b" class="inputs">
+						<input type="radio" name="question-5" value="3" id="radio--5b" />
+						<p class="input-text">Climbing the ladder in business management</p>
+					</label>
+					<label for="radio--5c" class="inputs">
+						<input type="radio" name="question-5" value="2" id="radio--5c" />
+						<p class="input-text">
+							Contributing to law and public policy initiatives
+						</p>
+					</label>
+					<label for="radio--5d" class="inputs">
+						<input type="radio" name="question-5" value="1" id="radio--5d" />
+						<p class="input-text">
+							Pursuing a career in the arts or entertainment industry
+						</p>
+					</label>
+					<label for="radio--5e" class="inputs">
+						<input type="radio" name="question-5" value="4" id="radio--5e" />
+						<p class="input-text">
+							Advancing in a scientific or technological field
+						</p>
+					</label>
+				</fieldset>
+
+				<fieldset class="test-slide" id="slide6">
+					<p class="subheading">Career Personality Test</p>
+					<h3 class="heading heading--tertiary">
+						How do you prefer to spend your free time?
+					</h3>
+					<label for="radio--6a" class="inputs">
+						<input type="radio" name="question-6" value="4" id="radio--6a" />
+						<p class="input-text">
+							Sports, Robotics, Games and outdoor activities
+						</p>
+					</label>
+					<label for="radio--6b" class="inputs">
+						<input type="radio" name="question-6" value="5" id="radio--6b" />
+						<p class="input-text">
+							Volunteering, caretaking, and community involvement
+						</p>
+					</label>
+					<label for="radio--6c" class="inputs">
+						<input type="radio" name="question-6" value="1" id="radio--6c" />
+						<p class="input-text">
+							Engaging in creative activities like drawing, writing, or
+							performing arts
+						</p>
+					</label>
+					<label for="radio--6d" class="inputs">
+						<input type="radio" name="question-6" value="2" id="radio--6d" />
+						<p class="input-text">
+							Reading, Binging, Debating and friendship gatherings
+						</p>
+					</label>
+					<label for="radio--6e" class="inputs">
+						<input type="radio" name="question-6" value="3" id="radio--6e" />
+						<p class="input-text">Drawing, Shopping, Sports and Games</p>
+					</label>
+				</fieldset>
+
+				<fieldset class="test-slide" id="slide7">
+					<p class="subheading">Career Personality Test</p>
+					<h3 class="heading heading--tertiary">
+						What type of challenges do you find most intriguing?
+					</h3>
+					<label for="radio--7a" class="inputs">
+						<input type="radio" name="question-7" value="3" id="radio--7a" />
+						<p class="input-text">
+							Strategic challenges related to business management and growth
+						</p>
+					</label>
+					<label for="radio--7b" class="inputs">
+						<input type="radio" name="question-7" value="4" id="radio--7b" />
+						<p class="input-text">
+							Complex scientific or technological puzzles
+						</p>
+					</label>
+					<label for="radio--7c" class="inputs">
+						<input type="radio" name="question-7" value="5" id="radio--7c" />
+						<p class="input-text">
+							Medical or health-related problems and finding solutions
+						</p>
+					</label>
+					<label for="radio--7d" class="inputs">
+						<input type="radio" name="question-7" value="1" id="radio--7d" />
+						<p class="input-text">
+							Creative challenges that allow you to express yourself
+							artistically
+						</p>
+					</label>
+					<label for="radio--7e" class="inputs">
+						<input type="radio" name="question-7" value="2" id="radio--7e" />
+						<p class="input-text">
+							Legal challenges and issues related to justice and societal impact
+						</p>
+					</label>
+				</fieldset>
+
+				<fieldset class="test-slide" id="slide8">
+					<p class="subheading">Career Personality Test</p>
+					<h3 class="heading heading--tertiary">
+						How do you approach decision-making?
+					</h3>
+					<label for="radio--8a" class="inputs">
+						<input type="radio" name="question-8" value="4" id="radio--8a" />
+						<p class="input-text">
+							Applying logical reasoning and scientific methods
+						</p>
+					</label>
+					<label for="radio--8b" class="inputs">
+						<input type="radio" name="question-8" value="2" id="radio--8b" />
+						<p class="input-text">Evaluating legal and ethical implications</p>
+					</label>
+					<label for="radio--8c" class="inputs">
+						<input type="radio" name="question-8" value="3" id="radio--8c" />
+						<p class="input-text">
+							Analyzing data and making informed, strategic decisions
+						</p>
+					</label>
+					<label for="radio--8d" class="inputs">
+						<input type="radio" name="question-8" value="5" id="radio--8d" />
+						<p class="input-text">
+							Considering the impact on people's health and well-being
+						</p>
+					</label>
+					<label for="radio--8e" class="inputs">
+						<input type="radio" name="question-8" value="1" id="radio--8e" />
+						<p class="input-text">
+							Trusting your intuition and creative instincts
+						</p>
+					</label>
+				</fieldset>
+
+				<fieldset class="test-slide" id="slide9">
+					<p class="subheading">Career Personality Test</p>
+					<h3 class="heading heading--tertiary">
+						What kind of projects excite you the most?
+					</h3>
+					<label for="radio--9a" class="inputs">
+						<input type="radio" name="question-9" value="3" id="radio--9a" />
+						<p class="input-text">
+							Business ventures with opportunities for growth and innovation
+						</p>
+					</label>
+					<label for="radio--9b" class="inputs">
+						<input type="radio" name="question-9" value="2" id="radio--9b" />
+						<p class="input-text">
+							Legal and policy projects addressing societal issues
+						</p>
+					</label>
+					<label for="radio--9c" class="inputs">
+						<input type="radio" name="question-9" value="1" id="radio--9c" />
+						<p class="input-text">
+							Artistic projects that involve creativity and self-expression
+						</p>
+					</label>
+					<label for="radio--9d" class="inputs">
+						<input type="radio" name="question-9" value="5" id="radio--9d" />
+						<p class="input-text">
+							Healthcare initiatives to improve community well-being
+						</p>
+					</label>
+					<label for="radio--9e" class="inputs">
+						<input type="radio" name="question-9" value="4" id="radio--9e" />
+						<p class="input-text">
+							Scientific research projects exploring new frontiers
+						</p>
+					</label>
+				</fieldset>
+
+				<fieldset class="test-slide" id="slide10">
+					<p class="subheading">Career Personality Test</p>
+					<h3 class="heading heading--tertiary">
+						What motivates you in your career?
+					</h3>
+					<label for="radio--10a" class="inputs">
+						<input type="radio" name="question-10" value="5" id="radio--10a" />
+						<p class="input-text">
+							Helping others and making a positive impact on their health
+						</p>
+					</label>
+					<label for="radio--10b" class="inputs">
+						<input type="radio" name="question-10" value="3" id="radio--10b" />
+						<p class="input-text">
+							Achieving success in business and making a mark in your industry
+						</p>
+					</label>
+					<label for="radio--10c" class="inputs">
+						<input type="radio" name="question-10" value="2" id="radio--10c" />
+						<p class="input-text">
+							Advocating for justice, fairness, and positive societal change
+						</p>
+					</label>
+					<label for="radio--10d" class="inputs">
+						<input type="radio" name="question-10" value="1" id="radio--10d" />
+						<p class="input-text">
+							Expressing yourself creatively and bringing ideas to life
+						</p>
+					</label>
+					<label for="radio--10e" class="inputs">
+						<input type="radio" name="question-10" value="4" id="radio--10e" />
+						<p class="input-text">
+							Advancing knowledge and contributing to scientific discoveries
+						</p>
+					</label>
+				</fieldset>
+
+				<fieldset class="test-slide" id="slide11">
+					<p class="subheading">Career Skill Test</p>
+					<h3 class="heading heading--tertiary">
+						Which of the following skills do you excel at or enjoy developing
+						the most?
+					</h3>
+					<label for="radio--11a" class="inputs">
+						<input type="radio" name="question-11" value="4" id="radio--11a" />
+						<p class="input-text">Analytical thinking and problem-solving</p>
+					</label>
+					<label for="radio--11b" class="inputs">
+						<input type="radio" name="question-11" value="2" id="radio--11b" />
+						<p class="input-text">Research and critical analysis</p>
+					</label>
+					<label for="radio--11c" class="inputs">
+						<input type="radio" name="question-11" value="1" id="radio--11c" />
+						<p class="input-text">Creativity and innovative thinking.</p>
+					</label>
+					<label for="radio--11d" class="inputs">
+						<input type="radio" name="question-11" value="5" id="radio--11d" />
+						<p class="input-text">Empathy and interpersonal communication</p>
+					</label>
+					<label for="radio--11e" class="inputs">
+						<input type="radio" name="question-11" value="3" id="radio--11e" />
+						<p class="input-text">Strategic planning and decision-making</p>
+					</label>
+				</fieldset>
+
+				<fieldset class="test-slide" id="slide12">
+					<p class="subheading">Career Skill Test</p>
+					<h3 class="heading heading--tertiary">
+						What type of projects do you feel most confident managing?
+					</h3>
+					<label for="radio--12a" class="inputs">
+						<input type="radio" name="question-12" value="4" id="radio--12a" />
+						<p class="input-text">
+							Scientific or technological research projects
+						</p>
+					</label>
+					<label for="radio--12b" class="inputs">
+						<input type="radio" name="question-12" value="2" id="radio--12b" />
+						<p class="input-text">
+							Legal and policy-related projects addressing societal issues
+						</p>
+					</label>
+					<label for="radio--12c" class="inputs">
+						<input type="radio" name="question-12" value="3" id="radio--12c" />
+						<p class="input-text">
+							Business projects with a focus on growth and efficiency
+						</p>
+					</label>
+					<label for="radio--12d" class="inputs">
+						<input type="radio" name="question-12" value="5" id="radio--12d" />
+						<p class="input-text">
+							Healthcare initiatives or community wellness programs
+						</p>
+					</label>
+					<label for="radio--12e" class="inputs">
+						<input type="radio" name="question-12" value="1" id="radio--12e" />
+						<p class="input-text">
+							Creative projects like art exhibitions or performances
+						</p>
+					</label>
+				</fieldset>
+
+				<fieldset class="test-slide" id="slide13">
+					<p class="subheading">Career Skill Test</p>
+					<h3 class="heading heading--tertiary">
+						In a team setting, which role do you naturally gravitate towards?
+					</h3>
+					<label for="radio--13a" class="inputs">
+						<input type="radio" name="question-13" value="5" id="radio--13a" />
+						<p class="input-text">Supportive and caring team member</p>
+					</label>
+					<label for="radio--13b" class="inputs">
+						<input type="radio" name="question-13" value="4" id="radio--13b" />
+						<p class="input-text">Analyst or problem solver</p>
+					</label>
+					<label for="radio--13c" class="inputs">
+						<input type="radio" name="question-13" value="2" id="radio--13c" />
+						<p class="input-text">Advocate for fairness and justice</p>
+					</label>
+					<label for="radio--13d" class="inputs">
+						<input type="radio" name="question-13" value="3" id="radio--13d" />
+						<p class="input-text">Leader or project manager</p>
+					</label>
+					<label for="radio--13e" class="inputs">
+						<input type="radio" name="question-13" value="1" id="radio--13e" />
+						<p class="input-text">Creative idea generator</p>
+					</label>
+				</fieldset>
+
+				<fieldset class="test-slide" id="slide6">
+					<p class="subheading">Career Skill Test</p>
+					<h3 class="heading heading--tertiary">
+						What type of information do you find most interesting to learn
+						about?
+					</h3>
+					<label for="radio--14a" class="inputs">
+						<input type="radio" name="question-14" value="4" id="radio--14a" />
+						<p class="input-text">
+							Scientific principles and technological advancements
+						</p>
+					</label>
+					<label for="radio--14b" class="inputs">
+						<input type="radio" name="question-14" value="5" id="radio--14b" />
+						<p class="input-text">Medical and health-related information</p>
+					</label>
+					<label for="radio--14c" class="inputs">
+						<input type="radio" name="question-14" value="1" id="radio--14c" />
+						<p class="input-text">Artistic and creative concepts</p>
+					</label>
+					<label for="radio--14d" class="inputs">
+						<input type="radio" name="question-14" value="2" id="radio--14d" />
+						<p class="input-text">Legal and policy frameworks</p>
+					</label>
+					<label for="radio--14e" class="inputs">
+						<input type="radio" name="question-14" value="3" id="radio--14e" />
+						<p class="input-text">
+							Business strategies and management techniques
+						</p>
+					</label>
+				</fieldset>
+
+				<fieldset class="test-slide" id="slide15">
+					<p class="subheading">Career Skill Test</p>
+					<h3 class="heading heading--tertiary">
+						Which aspect of a job is most appealing to you?
+					</h3>
+					<label for="radio--15a" class="inputs">
+						<input type="radio" name="question-15" value="4" id="radio--15a" />
+						<p class="input-text">
+							Contributing to scientific discoveries and advancements
+						</p>
+					</label>
+					<label for="radio--15b" class="inputs">
+						<input type="radio" name="question-15" value="1" id="radio--15b" />
+						<p class="input-text">
+							Expressing creativity and bringing ideas to life
+						</p>
+					</label>
+					<label for="radio--15c" class="inputs">
+						<input type="radio" name="question-15" value="5" id="radio--15c" />
+						<p class="input-text">
+							Helping and improving the well-being of individuals or communities
+						</p>
+					</label>
+					<label for="radio--15d" class="inputs">
+						<input type="radio" name="question-15" value="3" id="radio--15d" />
+						<p class="input-text">
+							Leading and making strategic decisions for an organization
+						</p>
+					</label>
+					<label for="radio--15e" class="inputs">
+						<input type="radio" name="question-15" value="2" id="radio--15e" />
+						<p class="input-text">Advocating for justice and societal impact</p>
+					</label>
+				</fieldset>
+
+				<div class="btn-container">
+					<div>
+						<button type="button" class="btn btn--prev">Previous</button>
+						<button type="button" class="btn btn--next">Next</button>
+					</div>
+					<button type="submit" class="btn btn--submit">Submit</button>
+				</div>
+			</form>
+		</main>
+
+		<script src="./test.js"></script>
+	</body>
+</html>

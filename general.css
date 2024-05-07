@@ -1,0 +1,88 @@
+/*
+
+--- 01 Typography System:
+- Font Sizes (px):
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+- Font weights:
+- Default : 400
+- Medium : 500
+- Semi-bold : 600
+- Bold : 700
+
+- Line heights:
+Default : 1
+Small: 1.05, 
+Paragraph default:1.6
+
+-- 02 Colors
+
+- Primary: #0b03fc
+- Tints: #fdf2e9
+- Shades: #cf711f
+- Accents: 
+- Greys: #555, #333
+
+
+-- 04 Border-Radius
+Default: 9px
+
+-- 05 Whitespace
+- Spacing System (px) 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-colour: #0b03fc;
+  --primary-colour-tint--100: #231cfc;
+  --primary-colour-shade--100: #0a03e3;
+  --text-grey: #262628;
+  --navbar-colour: #ffffffb3;
+  --white: #ffffff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+/* ******************************** */
+/* General Reusable Styles */
+
+.btn,
+.btn:visited,
+.btn:link {
+  text-decoration: none;
+  background-color: var(--primary-colour-tint--100);
+  color: var(--white);
+  border-radius: 100px;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--primary-colour-shade--100);
+  font-weight: 600;
+}
+
+.heading {
+  font-weight: 700;
+}
+
+.heading--primary {
+  font-size: 3.6rem;
+  color: var(--primary-colour-shade--100);
+}

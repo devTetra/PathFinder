@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PathFinder | Sign In</title>
+
+		<link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+		<link rel="stylesheet" href="./general.css" />
+		<link rel="stylesheet" href="./sign.css" />
+	</head>
+	<body>
+		<img
+			src="./images/logo.svg"
+			alt="PathFinder Logo"
+			class="logo logo--greeting"
+		/>
+		<main>
+			<div class="sign-box">
+				<div class="greeting greeting--in">
+					<h2 class="heading heading--greeting">Welcome Back!</h2>
+					<p class="greeting-text">
+						To keep being connected with us please login with your personal info
+					</p>
+					<p class="greeting-if">
+						Don't have an account?
+						<a class="if-link" href="./signup.html">Sign Up</a>
+					</p>
+				</div>
+				<div class="form-container form-container--in">
+					<div class="form-textbox">
+						<h1 class="heading heading--primary">Sign in to PathFinder</h1>
+						<div class="socials">
+							<a href="#" class="social-link">
+								<i class="fab fa-facebook-f"></i>
+							</a>
+							<a href="" class="social-link">
+								<i class="fab fa-google"></i>
+							</a>
+						</div>
+						<p class="form-text">Or use your email to sign in</p>
+					</div>
+					<form class="sign-form">
+						<label class="sign-label" for="email">
+							<input
+								type="email"
+								class="sign-input"
+								name="email"
+								id="email"
+								placeholder="Email"
+								autocomplete="email"
+								required
+							/>
+						</label>
+
+						<label for="pswd" class="sign-label">
+							<input
+								type="password"
+								class="sign-input"
+								name="pswd"
+								id="pswd"
+								placeholder="Enter Password"
+								required
+								pattern="^(?=.*[a-z])(?=.*[a-z])(?=.*\d)(?=.*\[!@#$%&*%?]).{8,16}$"
+							/>
+						</label>
+
+						<label for="checkbox" class="sign-label--check">
+							<input
+								type="checkbox"
+								class="sign-check"
+								name="agree"
+								id="checkbox"
+							/>
+							<p>Remember me on this device</p>
+						</label>
+
+						<button type="submit" onclick="submitBtn()" class="btn btn--form">
+							Sign In
+						</button>
+					</form>
+				</div>
+			</div>
+		</main>
+		<script
+			src="https://kit.fontawesome.com/2487134076.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="./sign.js"></script>
+	</body>
+</html>
