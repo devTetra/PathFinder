@@ -1,378 +1,175 @@
-# PathFinder 2.0 — Server
+# PathFinder Server
 
-The PathFinder server is the backend API for PathFinder 2.0.
+The backend API for **PathFinder**, a career assessment application that helps users discover suitable career paths based on their RIASEC assessment results.
 
-It provides the assessment data, processes completed assessments, calculates RIASEC scores, matches users against career profiles, and manages temporary assessment results.
+The server handles assessment scoring, career matching, result creation, and public result retrieval.
 
-## Responsibilities
+## Features
 
-The server is responsible for:
+- RIASEC-based career assessment
+- Server-side assessment scoring
+- Score normalization across all six RIASEC dimensions
+- Weighted career matching
+- Ranked career recommendations
+- Public result sharing through a unique result ID
+- Automatic result expiration after 30 days
+- MongoDB data persistence with Mongoose
+- Request validation with Zod
+- Centralized error handling
 
-- Providing assessment questions
-- Validating assessment submissions
-- Calculating RIASEC dimension scores
-- Normalizing scores to 0–100
-- Loading career profiles
-- Matching users with careers
-- Ranking career matches
-- Creating temporary result records
-- Retrieving result records
-- Expiring old results
-- Providing career information
-- Validating API input
-- Managing MongoDB communication
+## Tech Stack
 
-The server is the authoritative source for assessment scoring and career matching.
+- **Node.js**
+- **Express**
+- **TypeScript**
+- **MongoDB**
+- **Mongoose**
+- **Zod**
 
-## Technology Stack
+## RIASEC Assessment
 
-- Node.js
-- Express
-- TypeScript
-- MongoDB
-- Mongoose
-- Zod
+PathFinder evaluates users across six RIASEC dimensions:
 
-## Architecture
+- **R** — Realistic
+- **I** — Investigative
+- **A** — Artistic
+- **S** — Social
+- **E** — Enterprising
+- **C** — Conventional
 
-The backend follows a layered architecture:
+The assessment consists of 20 questions with five options per question.
 
-```text
-Routes
-  ↓
-Controllers
-  ↓
-Services
-  ↓
-Models
-  ↓
-MongoDB
-```
+The client submits the selected answers, while the server calculates the resulting RIASEC scores. Question scoring data is not exposed through the public questions endpoint.
 
-Validation is performed before business logic.
+The resulting scores are normalized to a 0–100 scale and compared against the configured requirements of each career. Career matches are calculated using dimension ranges and weights, then ranked by their final fit score.
 
-```text
-Request
-  ↓
-Route
-  ↓
-Validation
-  ↓
-Controller
-  ↓
-Service
-  ↓
-Model
-  ↓
-MongoDB
-```
+## API Endpoints
+
+### Questions
+
+| Method | Endpoint         | Description                  |
+| ------ | ---------------- | ---------------------------- |
+| GET    | `/api/questions` | Get all assessment questions |
+
+Question scoring configuration is excluded from the response.
+
+### Careers
+
+| Method | Endpoint             | Description          |
+| ------ | -------------------- | -------------------- |
+| GET    | `/api/careers`       | Get all careers      |
+| GET    | `/api/careers/:slug` | Get a career by slug |
+
+### Assessments
+
+| Method | Endpoint                 | Description                              |
+| ------ | ------------------------ | ---------------------------------------- |
+| POST   | `/api/assessment/submit` | Submit an assessment and create a result |
+
+An assessment submission must contain exactly 20 answers with unique question IDs.
+
+### Results
+
+| Method | Endpoint                 | Description                         |
+| ------ | ------------------------ | ----------------------------------- |
+| GET    | `/api/results/:resultId` | Retrieve a public assessment result |
+
+Results are available for 30 days.
 
 ## Project Structure
 
 ```text
 server/
-│
-├── src/
-│   ├── config/
-│   ├── constants/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── schemas/
-│   ├── services/
-│   ├── types/
-│   ├── utils/
-│   └── server.ts
-│
-├── .env
-├── .env.example
-├── package.json
-└── tsconfig.json
+ ┣ data
+ ┃ ┣ careers.json
+ ┃ ┗ questions.json
+ ┣ src
+ ┃ ┣ config
+ ┃ ┃ ┗ db.config.ts
+ ┃ ┣ constants
+ ┃ ┃ ┗ dimensions.ts
+ ┃ ┣ controllers
+ ┃ ┃ ┣ assessment.controller.ts
+ ┃ ┃ ┣ career.controller.ts
+ ┃ ┃ ┣ question.controller.ts
+ ┃ ┃ ┗ result.controller.ts
+ ┃ ┣ middleware
+ ┃ ┃ ┣ error.middleware.ts
+ ┃ ┃ ┗ validate.middleware.ts
+ ┃ ┣ models
+ ┃ ┃ ┣ Career.ts
+ ┃ ┃ ┣ Question.ts
+ ┃ ┃ ┗ Result.ts
+ ┃ ┣ routes
+ ┃ ┃ ┣ assessment.route.ts
+ ┃ ┃ ┣ career.route.ts
+ ┃ ┃ ┣ question.route.ts
+ ┃ ┃ ┗ result.route.ts
+ ┃ ┣ service
+ ┃ ┃ ┣ assessment.service.ts
+ ┃ ┃ ┣ career.service.ts
+ ┃ ┃ ┣ question.service.ts
+ ┃ ┃ ┗ result.service.ts
+ ┃ ┣ types
+ ┃ ┃ ┣ ApiError.ts
+ ┃ ┃ ┗ index.ts
+ ┃ ┣ utils
+ ┃ ┃ ┗ assessment.helper.ts
+ ┃ ┣ validators
+ ┃ ┃ ┣ assessment.validator.ts
+ ┃ ┃ ┣ career.validator.ts
+ ┃ ┃ ┣ question.validator.ts
+ ┃ ┃ ┗ result.validator.ts
+ ┃ ┗ server.ts
+ ┣ .env.example
+ ┣ package.json
+ ┗ tsconfig.json
 ```
 
-The structure may evolve as the application develops.
+## Database Seeding
 
-## API Responsibilities
+The JSON files in the `data` directory contain the career and question datasets used to populate the MongoDB database.
 
-The API is expected to provide endpoints for:
+They are seed data and are not used as the application's runtime data source.
 
-### Assessment
+The database should be populated from these datasets before using the assessment endpoints.
 
-```text
-GET /api/assessment/questions
-POST /api/assessment/submit
-```
+## Getting Started
 
-The questions endpoint provides the assessment questions without exposing scoring semantics that should remain hidden from the user.
+### Prerequisites
 
-The submission endpoint receives the user's selected answers and performs the authoritative scoring.
+- Node.js
+- MongoDB database
+- npm
 
-### Results
+### Installation
 
-```text
-GET /api/results/:resultId
-```
-
-This retrieves a previously generated assessment result.
-
-Results are temporary and should not be considered permanent user records.
-
-### Careers
-
-```text
-GET /api/careers
-GET /api/careers/:slug
-```
-
-These endpoints provide the supported career dataset.
-
-## Assessment Scoring
-
-Each question contains five possible answers.
-
-An answer can contribute to one or more RIASEC dimensions.
-
-For example:
-
-```text
-Option B
-I: 5
-R: 1
-```
-
-If selected, the answer contributes:
-
-```text
-Investigative += 5
-Realistic += 1
-```
-
-The server processes all 20 responses and calculates a raw score for each dimension.
-
-## Score Normalization
-
-Each RIASEC dimension has its own maximum possible score because the question bank does not provide identical scoring opportunities for every dimension.
-
-Therefore, each dimension is normalized independently.
-
-```text
-normalized score =
-(raw dimension score / dimension maximum) × 100
-```
-
-The resulting score is constrained to:
-
-```text
-0–100
-```
-
-For example:
-
-```text
-Investigative raw score = 64
-Investigative maximum = 85
-
-64 / 85 × 100 = 75.29
-```
-
-The user's Investigative score would therefore be approximately:
-
-```text
-75
-```
-
-## Career Matching
-
-Each career contains a RIASEC target profile.
-
-A career profile defines:
-
-- Preferred score range for each dimension
-- Dimension weight
-- Career metadata
-
-Example conceptually:
-
-```text
-Software Developer
-
-R: 35–65
-I: 70–100
-A: 25–60
-S: 20–50
-E: 30–60
-C: 55–85
-```
-
-The matching service compares the user's six normalized scores against the career's target ranges.
-
-The final career-match score is weighted so that dimensions that matter more to a career have greater influence.
-
-The exact matching formula is defined by the assessment model and should remain centralized in the matching service.
-
-## Result Records
-
-A result record contains enough information to reproduce the user's result without requiring authentication.
-
-Conceptually:
-
-```text
-Result
-├── resultId
-├── scores
-├── matches
-├── createdAt
-└── expiresAt
-```
-
-A result should have an expiration time.
-
-After expiration, the API should no longer return the result as an active assessment result.
-
-## No Authentication
-
-PathFinder 2.0 does not require user authentication.
-
-The assessment is designed to be anonymous.
-
-There is no need for:
-
-- User accounts
-- Passwords
-- Login
-- Registration
-- JWT authentication
-- User profiles
-
-The result identifier is used to retrieve a temporary assessment result.
-
-## Database
-
-MongoDB is used for persistent application data.
-
-The database is responsible for storing structured information such as:
-
-- Assessment questions
-- Career profiles
-- Assessment results
-
-Career illustrations themselves are not stored in MongoDB.
-
-The database stores the public client path for each illustration.
-
-Example:
-
-```text
-illustration:
-  "/images/careers/doctor.svg"
-```
-
-## Career Dataset
-
-Career information is treated as application data rather than hard-coded throughout the application.
-
-A career record may contain:
-
-```text
-Career
-├── name
-├── slug
-├── category
-├── description
-├── illustration
-├── riasecProfile
-│   ├── R
-│   ├── I
-│   ├── A
-│   ├── S
-│   ├── E
-│   └── C
-└── ...
-```
-
-The final schema should be determined after the career dataset and matching model have been finalized.
-
-## Assessment Questions
-
-Questions should also be represented as structured data.
-
-Conceptually:
-
-```text
-Question
-├── question
-├── category
-├── order
-└── options
-    ├── text
-    └── scoring
-```
-
-The scoring information should not be exposed through the public questions API if it is not required by the client.
-
-## Validation
-
-Zod should be used to validate API input.
-
-Assessment submissions should validate:
-
-- Number of responses
-- Valid question identifiers
-- Valid option identifiers
-- Required responses
-- No unexpected answers
-
-The server should never trust the structure of a request simply because it originated from the PathFinder client.
-
-## Error Handling
-
-The API should return consistent error responses.
-
-Errors should distinguish between:
-
-- Invalid input
-- Missing resources
-- Expired results
-- Server errors
-- Database errors
-
-The client should be able to determine the appropriate response from the HTTP status and response structure.
-
-## Environment Variables
-
-The server uses environment variables for configuration.
-
-Example:
-
-```env
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/pathfinder
-CLIENT_URL=http://localhost:5173
-```
-
-Secrets and database credentials must not be committed to Git.
-
-`.env.example` documents the required variables without containing real credentials.
-
-## TypeScript Configuration
-
-The server uses TypeScript to provide:
-
-- Static type checking
-- Safer data structures
-- Better editor support
-- Consistent interfaces between application layers
-
-`tsconfig.json` defines how TypeScript compiles the server source code.
-
-## Development
-
-Install dependencies:
+Clone the repository and install the dependencies:
 
 ```bash
 npm install
 ```
+
+### Environment Variables
+
+Create a `.env` file based on the provided `.env.example`:
+
+```bash
+cp .env.example .env
+```
+
+Then configure the required environment variables in `.env`.
+
+For example:
+
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+```
+
+Environment variables containing secrets should never be committed to the repository.
+
+### Development
 
 Start the development server:
 
@@ -380,7 +177,9 @@ Start the development server:
 npm run dev
 ```
 
-Build the server:
+### Production
+
+Build the project:
 
 ```bash
 npm run build
@@ -392,15 +191,52 @@ Start the production server:
 npm start
 ```
 
-## Server Development Principles
+## Result Expiration
 
-- Keep business logic inside services
-- Keep controllers thin
-- Validate external input
-- Keep database access inside models/services
-- Centralize scoring logic
-- Centralize career matching logic
-- Do not duplicate scoring calculations between client and server
-- Do not expose unnecessary scoring metadata through public endpoints
-- Do not store secrets in source control
-- Keep the API independent of the client implementation
+Assessment results expire after 30 days.
+
+Results use MongoDB's TTL index for automatic cleanup. The application also checks the result age when retrieving a result, ensuring that an expired result is not returned while waiting for MongoDB's TTL cleanup process.
+
+## Architecture
+
+The server follows a layered architecture:
+
+```text
+Routes
+   ↓
+Controllers
+   ↓
+Services
+   ↓
+Models
+```
+
+Utility functions provide reusable assessment-specific operations, while middleware handles request validation and errors.
+
+The assessment workflow is:
+
+```text
+Submit answers
+      ↓
+Validate assessment
+      ↓
+Calculate normalized RIASEC scores
+      ↓
+Match scores against careers
+      ↓
+Rank career matches
+      ↓
+Create result
+      ↓
+Return result ID
+```
+
+## API Response
+
+Assessment submission returns a public result ID along with the calculated scores and career matches.
+
+The result ID can then be used to retrieve the complete result through the results endpoint.
+
+## License
+
+This project is currently intended as a portfolio project.

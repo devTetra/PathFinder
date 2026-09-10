@@ -1,0 +1,1170 @@
+[
+	{
+		"text": "Which of these activities would you most look forward to doing?",
+		"options": [
+			{
+				"id": "A",
+				"text": "Building, repairing, or assembling something physical",
+				"scores": [
+					{
+						"dimension": "R",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "B",
+				"text": "Digging into data or research to figure out how something works",
+				"scores": [
+					{
+						"dimension": "I",
+						"points": 5
+					},
+					{
+						"dimension": "R",
+						"points": 1
+					}
+				]
+			},
+			{
+				"id": "C",
+				"text": "Creating a piece of art, music, or creative writing",
+				"scores": [
+					{
+						"dimension": "A",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "D",
+				"text": "Helping a friend work through a personal problem",
+				"scores": [
+					{
+						"dimension": "S",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "E",
+				"text": "Pitching an idea to get others excited and on board",
+				"scores": [
+					{
+						"dimension": "E",
+						"points": 5
+					},
+					{
+						"dimension": "S",
+						"points": 3
+					}
+				]
+			}
+		]
+	},
+	{
+		"text": "A group project has hit a snag. What's your instinct?",
+		"options": [
+			{
+				"id": "A",
+				"text": "Analyze the situation carefully to understand the root cause",
+				"scores": [
+					{
+						"dimension": "I",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "B",
+				"text": "Suggest a fresh, unconventional approach nobody has tried",
+				"scores": [
+					{
+						"dimension": "A",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "C",
+				"text": "Check in with everyone to make sure people feel heard",
+				"scores": [
+					{
+						"dimension": "S",
+						"points": 5
+					},
+					{
+						"dimension": "E",
+						"points": 3
+					}
+				]
+			},
+			{
+				"id": "D",
+				"text": "Take charge and rally the team toward a decision",
+				"scores": [
+					{
+						"dimension": "E",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "E",
+				"text": "Reorganize the plan into clear steps and a checklist",
+				"scores": [
+					{
+						"dimension": "C",
+						"points": 5
+					},
+					{
+						"dimension": "I",
+						"points": 1
+					}
+				]
+			}
+		]
+	},
+	{
+		"text": "Which class or club project would you choose?",
+		"options": [
+			{
+				"id": "A",
+				"text": "Building a working model or physical structure",
+				"scores": [
+					{
+						"dimension": "R",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "B",
+				"text": "Designing a mural, short film, or original piece",
+				"scores": [
+					{
+						"dimension": "A",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "C",
+				"text": "Organizing a peer support or mentoring program",
+				"scores": [
+					{
+						"dimension": "S",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "D",
+				"text": "Running a mock business or fundraising competition",
+				"scores": [
+					{
+						"dimension": "E",
+						"points": 5
+					},
+					{
+						"dimension": "C",
+						"points": 3
+					}
+				]
+			},
+			{
+				"id": "E",
+				"text": "Creating a detailed budget or schedule for the project",
+				"scores": [
+					{
+						"dimension": "C",
+						"points": 5
+					}
+				]
+			}
+		]
+	},
+	{
+		"text": "Imagine your ideal workday. Which best fits?",
+		"options": [
+			{
+				"id": "A",
+				"text": "Working with tools, machines, or your hands, outdoors or in a shop",
+				"scores": [
+					{
+						"dimension": "R",
+						"points": 5
+					},
+					{
+						"dimension": "I",
+						"points": 1
+					}
+				]
+			},
+			{
+				"id": "B",
+				"text": "Investigating a puzzle or technical problem step by step",
+				"scores": [
+					{
+						"dimension": "I",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "C",
+				"text": "Meeting with people and helping them work through personal or social issues",
+				"scores": [
+					{
+						"dimension": "S",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "D",
+				"text": "Negotiating deals or leading a team toward a goal",
+				"scores": [
+					{
+						"dimension": "E",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "E",
+				"text": "Keeping records, files, and schedules accurate and organized",
+				"scores": [
+					{
+						"dimension": "C",
+						"points": 5
+					},
+					{
+						"dimension": "I",
+						"points": 1
+					}
+				]
+			}
+		]
+	},
+	{
+		"text": "Which task would you rather be responsible for?",
+		"options": [
+			{
+				"id": "A",
+				"text": "Operating or maintaining equipment",
+				"scores": [
+					{
+						"dimension": "R",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "B",
+				"text": "Running an experiment and recording the results",
+				"scores": [
+					{
+						"dimension": "I",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "C",
+				"text": "Designing the visual look of a project",
+				"scores": [
+					{
+						"dimension": "A",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "D",
+				"text": "Convincing others to support a new idea",
+				"scores": [
+					{
+						"dimension": "E",
+						"points": 5
+					},
+					{
+						"dimension": "A",
+						"points": 1
+					}
+				]
+			},
+			{
+				"id": "E",
+				"text": "Entering and checking data for accuracy",
+				"scores": [
+					{
+						"dimension": "C",
+						"points": 5
+					}
+				]
+			}
+		]
+	},
+	{
+		"text": "Which environment would you feel most comfortable in?",
+		"options": [
+			{
+				"id": "A",
+				"text": "A workshop, garage, or outdoor job site",
+				"scores": [
+					{
+						"dimension": "R",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "B",
+				"text": "A lab or research setting where you test ideas",
+				"scores": [
+					{
+						"dimension": "I",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "C",
+				"text": "A studio or creative space full of materials and inspiration",
+				"scores": [
+					{
+						"dimension": "A",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "D",
+				"text": "A place where you're regularly working directly with people",
+				"scores": [
+					{
+						"dimension": "S",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "E",
+				"text": "An organized office with clear procedures and routines",
+				"scores": [
+					{
+						"dimension": "C",
+						"points": 5
+					}
+				]
+			}
+		]
+	},
+	{
+		"text": "What would make a task feel most rewarding to you?",
+		"options": [
+			{
+				"id": "A",
+				"text": "Seeing a physical result you personally built or fixed",
+				"scores": [
+					{
+						"dimension": "R",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "B",
+				"text": "Discovering the answer to something puzzling",
+				"scores": [
+					{
+						"dimension": "I",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "C",
+				"text": "Expressing something original that reflects your own style",
+				"scores": [
+					{
+						"dimension": "A",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "D",
+				"text": "Knowing you made a real difference in someone's life",
+				"scores": [
+					{
+						"dimension": "S",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "E",
+				"text": "Achieving a goal you set and being recognized for it",
+				"scores": [
+					{
+						"dimension": "E",
+						"points": 5
+					},
+					{
+						"dimension": "C",
+						"points": 1
+					}
+				]
+			}
+		]
+	},
+	{
+		"text": "In a group project, which role do you naturally take?",
+		"options": [
+			{
+				"id": "A",
+				"text": "The one who researches and double-checks the facts",
+				"scores": [
+					{
+						"dimension": "I",
+						"points": 5
+					},
+					{
+						"dimension": "R",
+						"points": 1
+					}
+				]
+			},
+			{
+				"id": "B",
+				"text": "The one who comes up with creative ideas or the presentation style",
+				"scores": [
+					{
+						"dimension": "A",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "C",
+				"text": "The one who makes sure everyone gets along and contributes",
+				"scores": [
+					{
+						"dimension": "S",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "D",
+				"text": "The one who leads and makes the final calls",
+				"scores": [
+					{
+						"dimension": "E",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "E",
+				"text": "The one who keeps track of deadlines and details",
+				"scores": [
+					{
+						"dimension": "C",
+						"points": 5
+					},
+					{
+						"dimension": "I",
+						"points": 1
+					}
+				]
+			}
+		]
+	},
+	{
+		"text": "Which weekend activity sounds most appealing?",
+		"options": [
+			{
+				"id": "A",
+				"text": "Repairing something around the house or working on a vehicle",
+				"scores": [
+					{
+						"dimension": "R",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "B",
+				"text": "Painting, playing music, or writing something creative",
+				"scores": [
+					{
+						"dimension": "A",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "C",
+				"text": "Organizing a get-together or helping a neighbor with something",
+				"scores": [
+					{
+						"dimension": "S",
+						"points": 5
+					},
+					{
+						"dimension": "E",
+						"points": 3
+					}
+				]
+			},
+			{
+				"id": "D",
+				"text": "Planning and pitching a small idea or project to friends",
+				"scores": [
+					{
+						"dimension": "E",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "E",
+				"text": "Organizing your finances, files, or a personal collection",
+				"scores": [
+					{
+						"dimension": "C",
+						"points": 5
+					}
+				]
+			}
+		]
+	},
+	{
+		"text": "You're given a problem with no clear instructions. What's your approach?",
+		"options": [
+			{
+				"id": "A",
+				"text": "Try a hands-on, trial-and-error approach to see what works",
+				"scores": [
+					{
+						"dimension": "R",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "B",
+				"text": "Research similar problems and analyze the data before acting",
+				"scores": [
+					{
+						"dimension": "I",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "C",
+				"text": "Talk to the people affected to understand their needs first",
+				"scores": [
+					{
+						"dimension": "S",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "D",
+				"text": "Decide quickly and set a direction for others to follow",
+				"scores": [
+					{
+						"dimension": "E",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "E",
+				"text": "Break it into a clear checklist and work through it methodically",
+				"scores": [
+					{
+						"dimension": "C",
+						"points": 5
+					}
+				]
+			}
+		]
+	},
+	{
+		"text": "Choose a project you'd want to lead.",
+		"options": [
+			{
+				"id": "A",
+				"text": "Designing and building a small structure or gadget",
+				"scores": [
+					{
+						"dimension": "R",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "B",
+				"text": "Investigating why something isn't working and solving it",
+				"scores": [
+					{
+						"dimension": "I",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "C",
+				"text": "Producing a short film, design, or piece of writing",
+				"scores": [
+					{
+						"dimension": "A",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "D",
+				"text": "Launching a new club, product idea, or campaign",
+				"scores": [
+					{
+						"dimension": "E",
+						"points": 5
+					},
+					{
+						"dimension": "S",
+						"points": 3
+					}
+				]
+			},
+			{
+				"id": "E",
+				"text": "Creating a clear system to track and organize information",
+				"scores": [
+					{
+						"dimension": "C",
+						"points": 5
+					}
+				]
+			}
+		]
+	},
+	{
+		"text": "Which of these would you choose as your main task at work?",
+		"options": [
+			{
+				"id": "A",
+				"text": "Operating machinery or working with physical materials",
+				"scores": [
+					{
+						"dimension": "R",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "B",
+				"text": "Solving a technical or scientific problem",
+				"scores": [
+					{
+						"dimension": "I",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "C",
+				"text": "Designing something visually appealing",
+				"scores": [
+					{
+						"dimension": "A",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "D",
+				"text": "Counseling, teaching, or supporting someone directly",
+				"scores": [
+					{
+						"dimension": "S",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "E",
+				"text": "Keeping accurate records and following clear procedures",
+				"scores": [
+					{
+						"dimension": "C",
+						"points": 5
+					}
+				]
+			}
+		]
+	},
+	{
+		"text": "Which task would you find most satisfying to complete?",
+		"options": [
+			{
+				"id": "A",
+				"text": "Assembling or repairing a physical object correctly",
+				"scores": [
+					{
+						"dimension": "R",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "B",
+				"text": "Solving a complex riddle or technical question",
+				"scores": [
+					{
+						"dimension": "I",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "C",
+				"text": "Finishing an original creative piece you're proud of",
+				"scores": [
+					{
+						"dimension": "A",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "D",
+				"text": "Successfully helping someone overcome a challenge",
+				"scores": [
+					{
+						"dimension": "S",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "E",
+				"text": "Closing a deal or winning people over to your idea",
+				"scores": [
+					{
+						"dimension": "E",
+						"points": 5
+					},
+					{
+						"dimension": "S",
+						"points": 3
+					}
+				]
+			}
+		]
+	},
+	{
+		"text": "Which kind of workplace culture appeals to you most?",
+		"options": [
+			{
+				"id": "A",
+				"text": "One that rewards curiosity and independent thinking",
+				"scores": [
+					{
+						"dimension": "I",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "B",
+				"text": "One that values originality and creative freedom",
+				"scores": [
+					{
+						"dimension": "A",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "C",
+				"text": "One centered on teamwork, care, and connection",
+				"scores": [
+					{
+						"dimension": "S",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "D",
+				"text": "One that's fast-paced, competitive, and goal-driven",
+				"scores": [
+					{
+						"dimension": "E",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "E",
+				"text": "One that's structured, predictable, and well organized",
+				"scores": [
+					{
+						"dimension": "C",
+						"points": 5
+					}
+				]
+			}
+		]
+	},
+	{
+		"text": "What motivates you most in a task or project?",
+		"options": [
+			{
+				"id": "A",
+				"text": "Producing something tangible that works well",
+				"scores": [
+					{
+						"dimension": "R",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "B",
+				"text": "Making something that expresses your personal vision",
+				"scores": [
+					{
+						"dimension": "A",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "C",
+				"text": "Supporting or improving the lives of others",
+				"scores": [
+					{
+						"dimension": "S",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "D",
+				"text": "Winning, persuading, or leading a group toward a goal",
+				"scores": [
+					{
+						"dimension": "E",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "E",
+				"text": "Doing things accurately and by the correct method",
+				"scores": [
+					{
+						"dimension": "C",
+						"points": 5
+					}
+				]
+			}
+		]
+	},
+	{
+		"text": "When your team faces a big decision, what's your role?",
+		"options": [
+			{
+				"id": "A",
+				"text": "The one who tests or builds a working prototype",
+				"scores": [
+					{
+						"dimension": "R",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "B",
+				"text": "The one who researches the options and weighs the evidence",
+				"scores": [
+					{
+						"dimension": "I",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "C",
+				"text": "The one who makes sure the decision considers everyone's wellbeing",
+				"scores": [
+					{
+						"dimension": "S",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "D",
+				"text": "The one who pushes the group to commit and move forward",
+				"scores": [
+					{
+						"dimension": "E",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "E",
+				"text": "The one who documents the decision and next steps clearly",
+				"scores": [
+					{
+						"dimension": "C",
+						"points": 5
+					}
+				]
+			}
+		]
+	},
+	{
+		"text": "Which of these hobbies would you most want to pick up?",
+		"options": [
+			{
+				"id": "A",
+				"text": "Woodworking, mechanics, or another hands-on craft",
+				"scores": [
+					{
+						"dimension": "R",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "B",
+				"text": "Amateur science, coding, or puzzle-solving",
+				"scores": [
+					{
+						"dimension": "I",
+						"points": 5
+					},
+					{
+						"dimension": "A",
+						"points": 1
+					}
+				]
+			},
+			{
+				"id": "C",
+				"text": "Drawing, photography, or creative writing",
+				"scores": [
+					{
+						"dimension": "A",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "D",
+				"text": "Starting a small side project or club to run",
+				"scores": [
+					{
+						"dimension": "E",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "E",
+				"text": "Planning a trip or event down to the smallest detail",
+				"scores": [
+					{
+						"dimension": "C",
+						"points": 5
+					}
+				]
+			}
+		]
+	},
+	{
+		"text": "How would you rather solve a tricky problem?",
+		"options": [
+			{
+				"id": "A",
+				"text": "Physically test different solutions until one works",
+				"scores": [
+					{
+						"dimension": "R",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "B",
+				"text": "Research the theory behind it before acting",
+				"scores": [
+					{
+						"dimension": "I",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "C",
+				"text": "Brainstorm unconventional, creative solutions",
+				"scores": [
+					{
+						"dimension": "A",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "D",
+				"text": "Ask others how the problem affects them and find common ground",
+				"scores": [
+					{
+						"dimension": "S",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "E",
+				"text": "Create a structured plan that follows a proven method",
+				"scores": [
+					{
+						"dimension": "C",
+						"points": 5
+					}
+				]
+			}
+		]
+	},
+	{
+		"text": "If your community had funding to fix a specific problem, which part would you want to own?",
+		"options": [
+			{
+				"id": "A",
+				"text": "Physically designing and building the solution",
+				"scores": [
+					{
+						"dimension": "R",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "B",
+				"text": "Digging into the data to find the real root cause first",
+				"scores": [
+					{
+						"dimension": "I",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "C",
+				"text": "Shaping how the solution looks, sounds, or is presented to people",
+				"scores": [
+					{
+						"dimension": "A",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "D",
+				"text": "Coordinating volunteers and working directly with the people affected",
+				"scores": [
+					{
+						"dimension": "S",
+						"points": 5
+					},
+					{
+						"dimension": "E",
+						"points": 3
+					}
+				]
+			},
+			{
+				"id": "E",
+				"text": "Pitching the plan to secure more funding and support",
+				"scores": [
+					{
+						"dimension": "E",
+						"points": 5
+					}
+				]
+			}
+		]
+	},
+	{
+		"text": "What kind of achievement would make you proudest?",
+		"options": [
+			{
+				"id": "A",
+				"text": "Solving a problem no one else could figure out",
+				"scores": [
+					{
+						"dimension": "I",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "B",
+				"text": "Creating something people find genuinely original",
+				"scores": [
+					{
+						"dimension": "A",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "C",
+				"text": "Being known as someone others can rely on for support",
+				"scores": [
+					{
+						"dimension": "S",
+						"points": 5
+					}
+				]
+			},
+			{
+				"id": "D",
+				"text": "Building something successful and leading it to grow",
+				"scores": [
+					{
+						"dimension": "E",
+						"points": 5
+					},
+					{
+						"dimension": "C",
+						"points": 3
+					}
+				]
+			},
+			{
+				"id": "E",
+				"text": "Running a process so smoothly that nothing goes wrong",
+				"scores": [
+					{
+						"dimension": "C",
+						"points": 5
+					}
+				]
+			}
+		]
+	}
+]

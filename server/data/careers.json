@@ -1,0 +1,1362 @@
+[
+	{
+		"name": "Software Engineer",
+		"slug": "software-engineer",
+		"shortDescription": "Designs, builds, and maintains software systems and applications.",
+		"description": "Software engineers translate ideas and requirements into working code, solving technical problems through logical, structured reasoning while building and testing systems that others will use.",
+		"coreDimensions": ["I", "R", "C"],
+		"dimensions": {
+			"R": {
+				"min": 30,
+				"max": 80,
+				"weight": 22
+			},
+			"I": {
+				"min": 60,
+				"max": 100,
+				"weight": 32
+			},
+			"A": {
+				"min": 0,
+				"max": 70,
+				"weight": 10
+			},
+			"S": {
+				"min": 0,
+				"max": 55,
+				"weight": 8
+			},
+			"E": {
+				"min": 0,
+				"max": 70,
+				"weight": 10
+			},
+			"C": {
+				"min": 40,
+				"max": 85,
+				"weight": 18
+			}
+		},
+		"illustrationKey": "/images/software_engineer.svg"
+	},
+	{
+		"name": "Data Scientist",
+		"slug": "data-scientist",
+		"shortDescription": "Analyzes complex data to uncover patterns and inform decisions.",
+		"description": "Data scientists combine statistics, programming, and domain knowledge to extract insight from large datasets, building models and reports that guide business or research decisions.",
+		"coreDimensions": ["I", "C", "R"],
+		"dimensions": {
+			"R": {
+				"min": 30,
+				"max": 80,
+				"weight": 14
+			},
+			"I": {
+				"min": 65,
+				"max": 100,
+				"weight": 34
+			},
+			"A": {
+				"min": 0,
+				"max": 60,
+				"weight": 8
+			},
+			"S": {
+				"min": 0,
+				"max": 55,
+				"weight": 8
+			},
+			"E": {
+				"min": 0,
+				"max": 65,
+				"weight": 12
+			},
+			"C": {
+				"min": 50,
+				"max": 95,
+				"weight": 24
+			}
+		},
+		"illustrationKey": "/images/data_scientist.svg"
+	},
+	{
+		"name": "Mechanical Engineer",
+		"slug": "mechanical-engineer",
+		"shortDescription": "Designs and tests mechanical systems, machines, and devices.",
+		"description": "Mechanical engineers apply physics and materials science to design, build, and refine machines and mechanical systems, balancing hands-on prototyping with rigorous technical analysis.",
+		"coreDimensions": ["R", "I", "C"],
+		"dimensions": {
+			"R": {
+				"min": 60,
+				"max": 100,
+				"weight": 32
+			},
+			"I": {
+				"min": 50,
+				"max": 95,
+				"weight": 26
+			},
+			"A": {
+				"min": 0,
+				"max": 55,
+				"weight": 8
+			},
+			"S": {
+				"min": 0,
+				"max": 50,
+				"weight": 6
+			},
+			"E": {
+				"min": 0,
+				"max": 65,
+				"weight": 10
+			},
+			"C": {
+				"min": 35,
+				"max": 85,
+				"weight": 18
+			}
+		},
+		"illustrationKey": "/images/mechanical_engineer.svg"
+	},
+	{
+		"name": "Civil Engineer",
+		"slug": "civil-engineer",
+		"shortDescription": "Plans and oversees construction of infrastructure like roads, bridges, and buildings.",
+		"description": "Civil engineers design and supervise the construction of public infrastructure, working within safety codes and regulations while coordinating with contractors and communities.",
+		"coreDimensions": ["R", "C"],
+		"dimensions": {
+			"R": {
+				"min": 55,
+				"max": 100,
+				"weight": 33
+			},
+			"I": {
+				"min": 40,
+				"max": 90,
+				"weight": 14
+			},
+			"A": {
+				"min": 0,
+				"max": 50,
+				"weight": 6
+			},
+			"S": {
+				"min": 0,
+				"max": 55,
+				"weight": 8
+			},
+			"E": {
+				"min": 0,
+				"max": 65,
+				"weight": 12
+			},
+			"C": {
+				"min": 45,
+				"max": 90,
+				"weight": 27
+			}
+		},
+		"illustrationKey": "/images/civil_engineer.svg"
+	},
+	{
+		"name": "Electrician",
+		"slug": "electrician",
+		"shortDescription": "Installs, maintains, and repairs electrical systems and wiring.",
+		"description": "Electricians work hands-on with electrical systems in homes, buildings, and equipment, following strict codes and safety procedures to diagnose and fix problems.",
+		"coreDimensions": ["R", "C"],
+		"dimensions": {
+			"R": {
+				"min": 65,
+				"max": 100,
+				"weight": 38
+			},
+			"I": {
+				"min": 25,
+				"max": 75,
+				"weight": 16
+			},
+			"A": {
+				"min": 0,
+				"max": 45,
+				"weight": 6
+			},
+			"S": {
+				"min": 0,
+				"max": 55,
+				"weight": 8
+			},
+			"E": {
+				"min": 0,
+				"max": 60,
+				"weight": 10
+			},
+			"C": {
+				"min": 40,
+				"max": 90,
+				"weight": 22
+			}
+		},
+		"illustrationKey": "/images/electrician.svg"
+	},
+	{
+		"name": "Automotive Technician",
+		"slug": "automotive-technician",
+		"shortDescription": "Diagnoses and repairs vehicle mechanical and electrical issues.",
+		"description": "Automotive technicians use hands-on skill and diagnostic reasoning to identify and fix problems in vehicles, working with tools, equipment, and increasingly complex onboard electronics.",
+		"coreDimensions": ["R"],
+		"dimensions": {
+			"R": {
+				"min": 65,
+				"max": 100,
+				"weight": 46
+			},
+			"I": {
+				"min": 30,
+				"max": 80,
+				"weight": 16
+			},
+			"A": {
+				"min": 0,
+				"max": 45,
+				"weight": 6
+			},
+			"S": {
+				"min": 0,
+				"max": 55,
+				"weight": 8
+			},
+			"E": {
+				"min": 0,
+				"max": 55,
+				"weight": 8
+			},
+			"C": {
+				"min": 20,
+				"max": 70,
+				"weight": 16
+			}
+		},
+		"illustrationKey": "/images/automotive_technician.svg"
+	},
+	{
+		"name": "Registered Nurse",
+		"slug": "registered-nurse",
+		"shortDescription": "Provides direct patient care and supports treatment plans.",
+		"description": "Registered nurses care for patients in hospitals, clinics, and other settings, combining clinical knowledge with hands-on procedures and compassionate, attentive communication.",
+		"coreDimensions": ["S", "I", "R"],
+		"dimensions": {
+			"R": {
+				"min": 30,
+				"max": 80,
+				"weight": 16
+			},
+			"I": {
+				"min": 40,
+				"max": 90,
+				"weight": 22
+			},
+			"A": {
+				"min": 0,
+				"max": 45,
+				"weight": 6
+			},
+			"S": {
+				"min": 60,
+				"max": 100,
+				"weight": 34
+			},
+			"E": {
+				"min": 0,
+				"max": 60,
+				"weight": 8
+			},
+			"C": {
+				"min": 25,
+				"max": 75,
+				"weight": 14
+			}
+		},
+		"illustrationKey": "/images/registered_nurse.svg"
+	},
+	{
+		"name": "Physician (Family Medicine)",
+		"slug": "physician-family-medicine",
+		"shortDescription": "Diagnoses and treats a wide range of patient health conditions.",
+		"description": "Family physicians assess symptoms, diagnose conditions, and manage ongoing patient care, relying on strong analytical reasoning and direct, empathetic interaction with patients.",
+		"coreDimensions": ["I", "S", "R"],
+		"dimensions": {
+			"R": {
+				"min": 25,
+				"max": 75,
+				"weight": 14
+			},
+			"I": {
+				"min": 60,
+				"max": 100,
+				"weight": 32
+			},
+			"A": {
+				"min": 0,
+				"max": 45,
+				"weight": 6
+			},
+			"S": {
+				"min": 50,
+				"max": 95,
+				"weight": 26
+			},
+			"E": {
+				"min": 0,
+				"max": 60,
+				"weight": 8
+			},
+			"C": {
+				"min": 25,
+				"max": 75,
+				"weight": 14
+			}
+		},
+		"illustrationKey": "/images/physician.svg"
+	},
+	{
+		"name": "Physical Therapist",
+		"slug": "physical-therapist",
+		"shortDescription": "Helps patients recover movement and manage physical pain.",
+		"description": "Physical therapists design and guide hands-on rehabilitation programs, working directly with patients to restore mobility and strength after injury or illness.",
+		"coreDimensions": ["S", "R"],
+		"dimensions": {
+			"R": {
+				"min": 40,
+				"max": 90,
+				"weight": 27
+			},
+			"I": {
+				"min": 35,
+				"max": 85,
+				"weight": 14
+			},
+			"A": {
+				"min": 0,
+				"max": 45,
+				"weight": 6
+			},
+			"S": {
+				"min": 55,
+				"max": 100,
+				"weight": 33
+			},
+			"E": {
+				"min": 0,
+				"max": 60,
+				"weight": 8
+			},
+			"C": {
+				"min": 20,
+				"max": 70,
+				"weight": 12
+			}
+		},
+		"illustrationKey": "/images/physical_therapist.svg"
+	},
+	{
+		"name": "Biomedical Researcher",
+		"slug": "biomedical-researcher",
+		"shortDescription": "Conducts laboratory research to advance medical science.",
+		"description": "Biomedical researchers design experiments, analyze data, and investigate biological questions in a lab setting, driven by curiosity and rigorous scientific method.",
+		"coreDimensions": ["I", "R"],
+		"dimensions": {
+			"R": {
+				"min": 30,
+				"max": 85,
+				"weight": 22
+			},
+			"I": {
+				"min": 65,
+				"max": 100,
+				"weight": 40
+			},
+			"A": {
+				"min": 0,
+				"max": 45,
+				"weight": 6
+			},
+			"S": {
+				"min": 0,
+				"max": 55,
+				"weight": 8
+			},
+			"E": {
+				"min": 0,
+				"max": 55,
+				"weight": 8
+			},
+			"C": {
+				"min": 25,
+				"max": 75,
+				"weight": 16
+			}
+		},
+		"illustrationKey": "/images/biomedical_researcher.svg"
+	},
+	{
+		"name": "Environmental Scientist",
+		"slug": "environmental-scientist",
+		"shortDescription": "Studies ecosystems and environmental data to inform policy and protection.",
+		"description": "Environmental scientists collect and analyze data on air, water, soil, and ecosystems, often combining fieldwork with research to guide conservation and regulatory decisions.",
+		"coreDimensions": ["I", "R", "S"],
+		"dimensions": {
+			"R": {
+				"min": 30,
+				"max": 85,
+				"weight": 22
+			},
+			"I": {
+				"min": 55,
+				"max": 100,
+				"weight": 34
+			},
+			"A": {
+				"min": 0,
+				"max": 45,
+				"weight": 6
+			},
+			"S": {
+				"min": 25,
+				"max": 75,
+				"weight": 16
+			},
+			"E": {
+				"min": 0,
+				"max": 55,
+				"weight": 8
+			},
+			"C": {
+				"min": 20,
+				"max": 70,
+				"weight": 14
+			}
+		},
+		"illustrationKey": "/images/environmental_scientist.svg"
+	},
+	{
+		"name": "Veterinarian",
+		"slug": "veterinarian",
+		"shortDescription": "Diagnoses and treats health conditions in animals.",
+		"description": "Veterinarians examine, diagnose, and treat animals, combining medical reasoning with hands-on procedures and communication with animal owners.",
+		"coreDimensions": ["I", "S", "R"],
+		"dimensions": {
+			"R": {
+				"min": 35,
+				"max": 85,
+				"weight": 20
+			},
+			"I": {
+				"min": 55,
+				"max": 100,
+				"weight": 32
+			},
+			"A": {
+				"min": 0,
+				"max": 45,
+				"weight": 6
+			},
+			"S": {
+				"min": 40,
+				"max": 90,
+				"weight": 24
+			},
+			"E": {
+				"min": 0,
+				"max": 50,
+				"weight": 6
+			},
+			"C": {
+				"min": 20,
+				"max": 70,
+				"weight": 12
+			}
+		},
+		"illustrationKey": "/images/veterinarian.svg"
+	},
+	{
+		"name": "Financial Analyst",
+		"slug": "financial-analyst",
+		"shortDescription": "Evaluates financial data to guide investment and business decisions.",
+		"description": "Financial analysts study markets, financial statements, and trends to build models and recommendations that guide investment or business strategy.",
+		"coreDimensions": ["C", "I", "E"],
+		"dimensions": {
+			"R": {
+				"min": 0,
+				"max": 55,
+				"weight": 10
+			},
+			"I": {
+				"min": 45,
+				"max": 90,
+				"weight": 26
+			},
+			"A": {
+				"min": 0,
+				"max": 50,
+				"weight": 8
+			},
+			"S": {
+				"min": 0,
+				"max": 55,
+				"weight": 8
+			},
+			"E": {
+				"min": 25,
+				"max": 75,
+				"weight": 18
+			},
+			"C": {
+				"min": 55,
+				"max": 100,
+				"weight": 30
+			}
+		},
+		"illustrationKey": "/images/financial_analyst.svg"
+	},
+	{
+		"name": "Accountant",
+		"slug": "accountant",
+		"shortDescription": "Manages financial records and ensures regulatory compliance.",
+		"description": "Accountants prepare, review, and analyze financial records, ensuring accuracy and compliance with tax and reporting requirements.",
+		"coreDimensions": ["C", "I"],
+		"dimensions": {
+			"R": {
+				"min": 0,
+				"max": 55,
+				"weight": 10
+			},
+			"I": {
+				"min": 30,
+				"max": 80,
+				"weight": 22
+			},
+			"A": {
+				"min": 0,
+				"max": 40,
+				"weight": 6
+			},
+			"S": {
+				"min": 0,
+				"max": 55,
+				"weight": 10
+			},
+			"E": {
+				"min": 0,
+				"max": 65,
+				"weight": 14
+			},
+			"C": {
+				"min": 60,
+				"max": 100,
+				"weight": 38
+			}
+		},
+		"illustrationKey": "/images/accountant.svg"
+	},
+	{
+		"name": "Actuary",
+		"slug": "actuary",
+		"shortDescription": "Uses statistics and probability to assess and price financial risk.",
+		"description": "Actuaries apply advanced mathematics and statistical modeling to assess risk for insurance and financial products, working carefully within rigorous professional standards.",
+		"coreDimensions": ["C", "I"],
+		"dimensions": {
+			"R": {
+				"min": 0,
+				"max": 55,
+				"weight": 10
+			},
+			"I": {
+				"min": 55,
+				"max": 100,
+				"weight": 32
+			},
+			"A": {
+				"min": 0,
+				"max": 40,
+				"weight": 6
+			},
+			"S": {
+				"min": 0,
+				"max": 55,
+				"weight": 8
+			},
+			"E": {
+				"min": 0,
+				"max": 60,
+				"weight": 12
+			},
+			"C": {
+				"min": 55,
+				"max": 100,
+				"weight": 32
+			}
+		},
+		"illustrationKey": "/images/actuary.svg"
+	},
+	{
+		"name": "Marketing Manager",
+		"slug": "marketing-manager",
+		"shortDescription": "Plans and leads campaigns to promote products or brands.",
+		"description": "Marketing managers develop strategies and creative campaigns to reach audiences, blending persuasive leadership with an understanding of consumer behavior.",
+		"coreDimensions": ["E", "A", "S"],
+		"dimensions": {
+			"R": {
+				"min": 0,
+				"max": 45,
+				"weight": 6
+			},
+			"I": {
+				"min": 0,
+				"max": 60,
+				"weight": 10
+			},
+			"A": {
+				"min": 35,
+				"max": 85,
+				"weight": 22
+			},
+			"S": {
+				"min": 30,
+				"max": 80,
+				"weight": 18
+			},
+			"E": {
+				"min": 55,
+				"max": 100,
+				"weight": 30
+			},
+			"C": {
+				"min": 20,
+				"max": 70,
+				"weight": 14
+			}
+		},
+		"illustrationKey": "/images/marketing_manager.svg"
+	},
+	{
+		"name": "Sales Manager",
+		"slug": "sales-manager",
+		"shortDescription": "Leads a sales team and drives revenue growth.",
+		"description": "Sales managers set targets, coach a sales team, and build client relationships, combining persuasive leadership with organized tracking of performance.",
+		"coreDimensions": ["E", "S", "C"],
+		"dimensions": {
+			"R": {
+				"min": 0,
+				"max": 45,
+				"weight": 8
+			},
+			"I": {
+				"min": 0,
+				"max": 60,
+				"weight": 10
+			},
+			"A": {
+				"min": 0,
+				"max": 50,
+				"weight": 8
+			},
+			"S": {
+				"min": 30,
+				"max": 80,
+				"weight": 22
+			},
+			"E": {
+				"min": 55,
+				"max": 100,
+				"weight": 34
+			},
+			"C": {
+				"min": 25,
+				"max": 75,
+				"weight": 18
+			}
+		},
+		"illustrationKey": "/images/sales_manager.svg"
+	},
+	{
+		"name": "Human Resources Manager",
+		"slug": "human-resources-manager",
+		"shortDescription": "Oversees hiring, employee relations, and workplace policy.",
+		"description": "HR managers support employees and organizational leadership by managing hiring, conflict resolution, and workplace policy, balancing people-focused care with administrative structure.",
+		"coreDimensions": ["S", "E", "C"],
+		"dimensions": {
+			"R": {
+				"min": 0,
+				"max": 45,
+				"weight": 8
+			},
+			"I": {
+				"min": 0,
+				"max": 60,
+				"weight": 12
+			},
+			"A": {
+				"min": 0,
+				"max": 50,
+				"weight": 8
+			},
+			"S": {
+				"min": 50,
+				"max": 95,
+				"weight": 30
+			},
+			"E": {
+				"min": 30,
+				"max": 80,
+				"weight": 22
+			},
+			"C": {
+				"min": 30,
+				"max": 80,
+				"weight": 20
+			}
+		},
+		"illustrationKey": "/images/hr_manager.svg"
+	},
+	{
+		"name": "Entrepreneur / Small Business Owner",
+		"slug": "entrepreneur-small-business-owner",
+		"shortDescription": "Starts and runs an independent business venture.",
+		"description": "Entrepreneurs identify opportunities and build businesses from the ground up, taking on varied responsibilities from strategy and finances to marketing and operations.",
+		"coreDimensions": ["E", "C", "A"],
+		"dimensions": {
+			"R": {
+				"min": 0,
+				"max": 55,
+				"weight": 8
+			},
+			"I": {
+				"min": 15,
+				"max": 70,
+				"weight": 12
+			},
+			"A": {
+				"min": 15,
+				"max": 70,
+				"weight": 16
+			},
+			"S": {
+				"min": 15,
+				"max": 70,
+				"weight": 14
+			},
+			"E": {
+				"min": 55,
+				"max": 100,
+				"weight": 32
+			},
+			"C": {
+				"min": 20,
+				"max": 75,
+				"weight": 18
+			}
+		},
+		"illustrationKey": "/images/entrepreneur.svg"
+	},
+	{
+		"name": "Lawyer",
+		"slug": "lawyer",
+		"shortDescription": "Advises and represents clients on legal matters.",
+		"description": "Lawyers research law, build arguments, and advocate for clients, combining sharp analytical reasoning with persuasive communication in negotiations and court.",
+		"coreDimensions": ["E", "I", "A"],
+		"dimensions": {
+			"R": {
+				"min": 0,
+				"max": 45,
+				"weight": 6
+			},
+			"I": {
+				"min": 45,
+				"max": 95,
+				"weight": 26
+			},
+			"A": {
+				"min": 15,
+				"max": 65,
+				"weight": 14
+			},
+			"S": {
+				"min": 15,
+				"max": 65,
+				"weight": 14
+			},
+			"E": {
+				"min": 50,
+				"max": 95,
+				"weight": 28
+			},
+			"C": {
+				"min": 15,
+				"max": 65,
+				"weight": 12
+			}
+		},
+		"illustrationKey": "/images/lawyer.svg"
+	},
+	{
+		"name": "Paralegal",
+		"slug": "paralegal",
+		"shortDescription": "Supports lawyers by preparing documents and conducting legal research.",
+		"description": "Paralegals organize case files, conduct legal research, and draft documents, providing the detailed, structured support that keeps legal work on track, while also coordinating with clients and attorneys.",
+		"coreDimensions": ["C", "I", "E"],
+		"dimensions": {
+			"R": {
+				"min": 0,
+				"max": 45,
+				"weight": 8
+			},
+			"I": {
+				"min": 35,
+				"max": 85,
+				"weight": 24
+			},
+			"A": {
+				"min": 0,
+				"max": 50,
+				"weight": 8
+			},
+			"S": {
+				"min": 0,
+				"max": 60,
+				"weight": 14
+			},
+			"E": {
+				"min": 0,
+				"max": 65,
+				"weight": 16
+			},
+			"C": {
+				"min": 50,
+				"max": 95,
+				"weight": 30
+			}
+		},
+		"illustrationKey": "/images/paralegal.svg"
+	},
+	{
+		"name": "Elementary School Teacher",
+		"slug": "elementary-school-teacher",
+		"shortDescription": "Teaches and nurtures young children's early learning.",
+		"description": "Elementary teachers design engaging lessons and support young students' academic and social development, blending creativity with classroom leadership.",
+		"coreDimensions": ["S", "A", "E"],
+		"dimensions": {
+			"R": {
+				"min": 0,
+				"max": 40,
+				"weight": 6
+			},
+			"I": {
+				"min": 0,
+				"max": 55,
+				"weight": 8
+			},
+			"A": {
+				"min": 25,
+				"max": 75,
+				"weight": 20
+			},
+			"S": {
+				"min": 55,
+				"max": 100,
+				"weight": 34
+			},
+			"E": {
+				"min": 20,
+				"max": 70,
+				"weight": 18
+			},
+			"C": {
+				"min": 15,
+				"max": 65,
+				"weight": 14
+			}
+		},
+		"illustrationKey": "/images/elementary_school_teacher.svg"
+	},
+	{
+		"name": "High School Science Teacher",
+		"slug": "high-school-science-teacher",
+		"shortDescription": "Teaches science concepts and skills to teenage students.",
+		"description": "Science teachers explain and demonstrate scientific concepts, design experiments and lessons, and guide students in developing analytical thinking skills.",
+		"coreDimensions": ["S", "I", "A"],
+		"dimensions": {
+			"R": {
+				"min": 0,
+				"max": 40,
+				"weight": 6
+			},
+			"I": {
+				"min": 35,
+				"max": 85,
+				"weight": 24
+			},
+			"A": {
+				"min": 15,
+				"max": 65,
+				"weight": 16
+			},
+			"S": {
+				"min": 50,
+				"max": 95,
+				"weight": 30
+			},
+			"E": {
+				"min": 0,
+				"max": 65,
+				"weight": 14
+			},
+			"C": {
+				"min": 0,
+				"max": 60,
+				"weight": 10
+			}
+		},
+		"illustrationKey": "/images/high_school_science_teacher.svg"
+	},
+	{
+		"name": "School Counselor",
+		"slug": "school-counselor",
+		"shortDescription": "Supports students' academic, social, and emotional development.",
+		"description": "School counselors guide students through academic planning and personal challenges, offering empathetic support tailored to each student's needs.",
+		"coreDimensions": ["S", "A"],
+		"dimensions": {
+			"R": {
+				"min": 0,
+				"max": 40,
+				"weight": 6
+			},
+			"I": {
+				"min": 15,
+				"max": 65,
+				"weight": 10
+			},
+			"A": {
+				"min": 15,
+				"max": 65,
+				"weight": 16
+			},
+			"S": {
+				"min": 55,
+				"max": 100,
+				"weight": 44
+			},
+			"E": {
+				"min": 0,
+				"max": 60,
+				"weight": 14
+			},
+			"C": {
+				"min": 0,
+				"max": 55,
+				"weight": 10
+			}
+		},
+		"illustrationKey": "/images/school_counselor.svg"
+	},
+	{
+		"name": "Graphic Designer",
+		"slug": "graphic-designer",
+		"shortDescription": "Creates visual content for brands, print, and digital media.",
+		"description": "Graphic designers craft visual communication -- logos, layouts, and digital graphics -- combining artistic vision with technical execution using design tools.",
+		"coreDimensions": ["A", "R"],
+		"dimensions": {
+			"R": {
+				"min": 15,
+				"max": 65,
+				"weight": 16
+			},
+			"I": {
+				"min": 20,
+				"max": 70,
+				"weight": 10
+			},
+			"A": {
+				"min": 55,
+				"max": 100,
+				"weight": 46
+			},
+			"S": {
+				"min": 0,
+				"max": 35,
+				"weight": 4
+			},
+			"E": {
+				"min": 0,
+				"max": 55,
+				"weight": 10
+			},
+			"C": {
+				"min": 0,
+				"max": 60,
+				"weight": 14
+			}
+		},
+		"illustrationKey": "/images/graphic_designer.svg"
+	},
+	{
+		"name": "UI/UX Designer",
+		"slug": "ui-ux-designer",
+		"shortDescription": "Designs how people interact with digital products.",
+		"description": "UI/UX designers research user needs and design intuitive digital interfaces, balancing creative visual design with structured, research-driven problem solving.",
+		"coreDimensions": ["A", "I", "C"],
+		"dimensions": {
+			"R": {
+				"min": 0,
+				"max": 40,
+				"weight": 6
+			},
+			"I": {
+				"min": 30,
+				"max": 80,
+				"weight": 24
+			},
+			"A": {
+				"min": 50,
+				"max": 95,
+				"weight": 32
+			},
+			"S": {
+				"min": 0,
+				"max": 55,
+				"weight": 8
+			},
+			"E": {
+				"min": 0,
+				"max": 60,
+				"weight": 12
+			},
+			"C": {
+				"min": 20,
+				"max": 70,
+				"weight": 18
+			}
+		},
+		"illustrationKey": "/images/ui_ux_designer.svg"
+	},
+	{
+		"name": "Architect",
+		"slug": "architect",
+		"shortDescription": "Designs buildings and spaces that are functional and visually compelling.",
+		"description": "Architects design structures and spaces, balancing creative vision with technical knowledge of materials, structure, and building codes.",
+		"coreDimensions": ["A", "R"],
+		"dimensions": {
+			"R": {
+				"min": 30,
+				"max": 80,
+				"weight": 28
+			},
+			"I": {
+				"min": 25,
+				"max": 75,
+				"weight": 12
+			},
+			"A": {
+				"min": 50,
+				"max": 95,
+				"weight": 38
+			},
+			"S": {
+				"min": 0,
+				"max": 100,
+				"weight": 2
+			},
+			"E": {
+				"min": 0,
+				"max": 55,
+				"weight": 8
+			},
+			"C": {
+				"min": 0,
+				"max": 60,
+				"weight": 12
+			}
+		},
+		"illustrationKey": "/images/architect.svg"
+	},
+	{
+		"name": "Journalist",
+		"slug": "journalist",
+		"shortDescription": "Researches and writes news and feature stories.",
+		"description": "Journalists investigate stories, interview sources, and write compelling narratives, combining storytelling craft with the drive to pursue and verify information.",
+		"coreDimensions": ["A", "E"],
+		"dimensions": {
+			"R": {
+				"min": 0,
+				"max": 40,
+				"weight": 4
+			},
+			"I": {
+				"min": 25,
+				"max": 75,
+				"weight": 14
+			},
+			"A": {
+				"min": 45,
+				"max": 95,
+				"weight": 36
+			},
+			"S": {
+				"min": 0,
+				"max": 60,
+				"weight": 12
+			},
+			"E": {
+				"min": 20,
+				"max": 70,
+				"weight": 26
+			},
+			"C": {
+				"min": 0,
+				"max": 50,
+				"weight": 8
+			}
+		},
+		"illustrationKey": "/images/journalist.svg"
+	},
+	{
+		"name": "Public Relations Specialist",
+		"slug": "public-relations-specialist",
+		"shortDescription": "Manages public image and messaging for organizations or clients.",
+		"description": "PR specialists build media relationships and manage public perception, combining persuasive communication with creative content development.",
+		"coreDimensions": ["E", "S", "A"],
+		"dimensions": {
+			"R": {
+				"min": 0,
+				"max": 40,
+				"weight": 4
+			},
+			"I": {
+				"min": 0,
+				"max": 55,
+				"weight": 8
+			},
+			"A": {
+				"min": 20,
+				"max": 70,
+				"weight": 20
+			},
+			"S": {
+				"min": 30,
+				"max": 80,
+				"weight": 26
+			},
+			"E": {
+				"min": 45,
+				"max": 95,
+				"weight": 28
+			},
+			"C": {
+				"min": 0,
+				"max": 60,
+				"weight": 14
+			}
+		},
+		"illustrationKey": "/images/public_relations_specialist.svg"
+	},
+	{
+		"name": "Social Worker",
+		"slug": "social-worker",
+		"shortDescription": "Supports individuals and families facing personal or social challenges.",
+		"description": "Social workers advocate for and support vulnerable individuals and families, connecting them with resources and navigating complex personal and systemic challenges.",
+		"coreDimensions": ["S", "A", "E"],
+		"dimensions": {
+			"R": {
+				"min": 0,
+				"max": 40,
+				"weight": 6
+			},
+			"I": {
+				"min": 15,
+				"max": 65,
+				"weight": 14
+			},
+			"A": {
+				"min": 0,
+				"max": 60,
+				"weight": 14
+			},
+			"S": {
+				"min": 55,
+				"max": 100,
+				"weight": 38
+			},
+			"E": {
+				"min": 15,
+				"max": 65,
+				"weight": 16
+			},
+			"C": {
+				"min": 0,
+				"max": 55,
+				"weight": 12
+			}
+		},
+		"illustrationKey": "/images/social_worker.svg"
+	},
+	{
+		"name": "Urban Planner",
+		"slug": "urban-planner",
+		"shortDescription": "Designs land use and development plans for communities.",
+		"description": "Urban planners analyze data and community needs to guide how land, infrastructure, and public spaces are developed, balancing research with public engagement.",
+		"coreDimensions": ["I", "S", "E"],
+		"dimensions": {
+			"R": {
+				"min": 0,
+				"max": 55,
+				"weight": 10
+			},
+			"I": {
+				"min": 45,
+				"max": 95,
+				"weight": 30
+			},
+			"A": {
+				"min": 0,
+				"max": 40,
+				"weight": 6
+			},
+			"S": {
+				"min": 20,
+				"max": 70,
+				"weight": 20
+			},
+			"E": {
+				"min": 15,
+				"max": 65,
+				"weight": 18
+			},
+			"C": {
+				"min": 15,
+				"max": 65,
+				"weight": 16
+			}
+		},
+		"illustrationKey": "/images/urban_planner.svg"
+	},
+	{
+		"name": "Chef",
+		"slug": "chef",
+		"shortDescription": "Creates and prepares dishes and leads a professional kitchen.",
+		"description": "Chefs combine hands-on culinary craft with creative menu development, often leading a fast-paced kitchen team under pressure.",
+		"coreDimensions": ["R", "A", "E"],
+		"dimensions": {
+			"R": {
+				"min": 50,
+				"max": 100,
+				"weight": 32
+			},
+			"I": {
+				"min": 0,
+				"max": 40,
+				"weight": 6
+			},
+			"A": {
+				"min": 25,
+				"max": 75,
+				"weight": 24
+			},
+			"S": {
+				"min": 0,
+				"max": 60,
+				"weight": 12
+			},
+			"E": {
+				"min": 15,
+				"max": 65,
+				"weight": 18
+			},
+			"C": {
+				"min": 0,
+				"max": 50,
+				"weight": 8
+			}
+		},
+		"illustrationKey": "/images/chef.svg"
+	},
+	{
+		"name": "Musician",
+		"slug": "musician",
+		"shortDescription": "Performs, composes, or produces music professionally.",
+		"description": "Musicians develop and perform musical work, expressing creativity through composition, performance, or production, often building a career through practice and independent work.",
+		"coreDimensions": ["A"],
+		"dimensions": {
+			"R": {
+				"min": 0,
+				"max": 45,
+				"weight": 8
+			},
+			"I": {
+				"min": 0,
+				"max": 65,
+				"weight": 10
+			},
+			"A": {
+				"min": 55,
+				"max": 100,
+				"weight": 51
+			},
+			"S": {
+				"min": 0,
+				"max": 55,
+				"weight": 12
+			},
+			"E": {
+				"min": 0,
+				"max": 60,
+				"weight": 14
+			},
+			"C": {
+				"min": 0,
+				"max": 35,
+				"weight": 5
+			}
+		},
+		"illustrationKey": "/images/musician.svg"
+	},
+	{
+		"name": "Police Officer",
+		"slug": "police-officer",
+		"shortDescription": "Protects public safety and enforces laws in the community.",
+		"description": "Police officers patrol communities, respond to incidents, and enforce laws, combining physical readiness with decisive judgment and direct community interaction.",
+		"coreDimensions": ["R", "E", "S"],
+		"dimensions": {
+			"R": {
+				"min": 45,
+				"max": 95,
+				"weight": 28
+			},
+			"I": {
+				"min": 0,
+				"max": 55,
+				"weight": 10
+			},
+			"A": {
+				"min": 0,
+				"max": 40,
+				"weight": 6
+			},
+			"S": {
+				"min": 20,
+				"max": 70,
+				"weight": 20
+			},
+			"E": {
+				"min": 20,
+				"max": 70,
+				"weight": 22
+			},
+			"C": {
+				"min": 0,
+				"max": 60,
+				"weight": 14
+			}
+		},
+		"illustrationKey": "/images/police.svg"
+	}
+]
