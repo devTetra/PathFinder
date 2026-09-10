@@ -47,9 +47,9 @@ The resulting scores are normalized to a 0–100 scale and compared against the 
 
 ### Questions
 
-| Method | Endpoint         | Description                  |
-| ------ | ---------------- | ---------------------------- |
-| GET    | `/api/questions` | Get all assessment questions |
+| Method | Endpoint          | Description                  |
+| ------ | ----------------- | ---------------------------- |
+| GET    | `/api/questions/` | Get all assessment questions |
 
 Question scoring configuration is excluded from the response.
 
@@ -57,7 +57,7 @@ Question scoring configuration is excluded from the response.
 
 | Method | Endpoint             | Description          |
 | ------ | -------------------- | -------------------- |
-| GET    | `/api/careers`       | Get all careers      |
+| GET    | `/api/careers/`      | Get all careers      |
 | GET    | `/api/careers/:slug` | Get a career by slug |
 
 ### Assessments
