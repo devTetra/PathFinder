@@ -1,8 +1,10 @@
+import { Outlet } from "react-router";
+
 function App() {
   return (
-    <>
-      <section>PathFinder</section>
-    </>
+    <div className="font-jakarta text-text-primary">
+      <Outlet />
+    </div>
   );
 }
 
