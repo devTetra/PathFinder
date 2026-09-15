@@ -28,8 +28,8 @@ export const Landing = () => {
             </p>
             <div className="flex flex-col items-center gap-3 self-center md:flex-row lg:self-auto">
               <Link
-                to=""
-                className="bg-primary hover:bg-primary-hover flex cursor-pointer items-center gap-1.5 rounded-lg px-5 py-3 text-[14px] font-bold text-white"
+                to="/intro"
+                className="bg-primary focus-visible:ring-primary hover:bg-primary-hover flex items-center gap-1.5 rounded-lg px-5 py-3 text-[14px] font-bold text-white outline-0 transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-offset-1"
               >
                 <p>Start the assessment</p>
                 <ArrowRight aria-hidden="true" />
