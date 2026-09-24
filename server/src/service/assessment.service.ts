@@ -32,7 +32,7 @@ export const careerMatchService = async (scores: RiasecScores) => {
 		});
 		careerMatches.push({ career: _id, fit: Math.round(fit / 100) });
 	});
-	careerMatches.sort((a, b) => b.fit - a.fit);
+	careerMatches.sort((a, b) => b.fit - a.fit).slice(0, 5);
 	return careerMatches;
 };
 
