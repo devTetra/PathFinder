@@ -1,3 +1,4 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import 'tailwindcss';
 
@@ -5,12 +6,15 @@
   --color-primary: #E8622C;
   --color-primary-hover: #D15828;
   --color-primary-soft: #FCEFE2;
+  --color-primary-dark: #C94F20;
   --color-secondary: #2B3A4A;
   --color-accent: #F2B705;
   --color-accent-soft: #FCEFC5;
+  --color-accent-wash: #FDF6E3;
   --color-background: #FCF9F4;
   --color-surface: #FFFFFF;
   --color-border: #E7DFD3;
+  --color-input-border: #C9C1B2;
   --color-footer: #202C38;
 
   --color-text-primary: #26221D;
@@ -21,6 +25,32 @@
   --color-success: #3C8C5C;
   --color-warning: #C9821E;
   --color-error: #C0402E;
+  --color-error-soft: #FBE4E0;
 
-  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+  /* --font-manrope: "Manrope", sans-serif; */
+  --font-jakarta: "Plus Jakarta Sans", sans-serif
+}
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-border);
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg,
+      transparent,
+      rgb(255 255 255 / 0.45),
+      transparent);
+  animation: skeleton-shimmer 1.5s infinite;
+}
+
+@keyframes skeleton-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
 }

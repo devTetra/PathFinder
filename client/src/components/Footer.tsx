@@ -8,15 +8,15 @@ export const Footer = () => {
       <div className="flex items-center gap-1">
         <div className="flex items-center gap-1">
           <img src={logo} alt="PathFinder Logo" className="size-6" />
-          <p className="font-bold text-white">PathFinder</p>
+          <p className="text-surface font-bold">PathFinder</p>
         </div>
-        <div className="h-4 border-[0.5px] border-white/60" />
-        <p className="text-xs font-extralight text-white/80 md:text-[13px]">
+        <div className="border-surface/60 h-4 border-[0.5px]" />
+        <p className="text-surface/80 text-xs font-extralight md:text-[13px]">
           Find the career direction that fits you.
         </p>
       </div>
 
-      <p className="text-xs text-white/50">
+      <p className="text-surface/50 text-xs">
         © {year} PathFinder. All rights reserved
       </p>
     </footer>

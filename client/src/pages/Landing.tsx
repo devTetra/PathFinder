@@ -3,8 +3,10 @@ import { Navbar } from "../components/Navbar";
 import hero from "../assets/undraw_choose_5kz4.svg";
 import { Link } from "react-router";
 import { Footer } from "../components/Footer";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 export const Landing = () => {
+  useDocumentTitle("Find Your Career Direction");
   return (
     <div>
       <Navbar />
@@ -18,7 +20,7 @@ export const Landing = () => {
             <p className="bg-accent-soft text-text-accent rounded-xl px-3 py-1 text-xs font-semibold">
               Free • No account needed
             </p>
-            <h1 className="text-text-primary text-4xl/9 font-extrabold">
+            <h1 className="text-4xl/9 font-extrabold">
               Find the career direction that actually fits you
             </h1>
             <p className="text-text-secondary leading-7 text-pretty">
@@ -28,8 +30,8 @@ export const Landing = () => {
             </p>
             <div className="flex flex-col items-center gap-3 self-center md:flex-row lg:self-auto">
               <Link
-                to="/intro"
-                className="bg-primary focus-visible:ring-primary hover:bg-primary-hover flex items-center gap-1.5 rounded-lg px-5 py-3 text-[14px] font-bold text-white outline-0 transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-offset-1"
+                to="assessment"
+                className="bg-primary focus-visible:ring-primary hover:bg-primary-hover text-surface flex items-center gap-1.5 rounded-lg px-5 py-3 text-[14px] font-bold outline-0 transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-offset-1"
               >
                 <p>Start the assessment</p>
                 <ArrowRight aria-hidden="true" />
