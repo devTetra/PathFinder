@@ -9,6 +9,9 @@ interface ICareer {
 	description: string;
 	coreDimensions: RiasecDimension[];
 	dimensions: CareerDimensions;
+	skills: string[];
+	responsibilities: string[];
+	relatedCareers: string[];
 	illustrationKey: string;
 }
 
@@ -36,6 +39,9 @@ const careerSchema = new Schema<ICareer>(
 			E: { type: careerDimensionSchema, required: true },
 			C: { type: careerDimensionSchema, required: true },
 		},
+		skills: { type: [String], required: true },
+		responsibilities: { type: [String], required: true },
+		relatedCareers: { type: [String], required: true },
 		illustrationKey: { type: String, required: true },
 	},
 	{

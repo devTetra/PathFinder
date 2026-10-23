@@ -15,5 +15,14 @@ export const createCareerSchema = z.object({
 			weight: z.number('Minimum dimension is required').min(1),
 		}),
 	),
+	skills: z.array(z.string().min(1)).length(7),
+
+	responsibilities: z.array(z.string().min(1)).length(6),
+
+	relatedCareers: z.array(z.string().min(1)).length(4),
 	illustrationKey: z.string('Illustration key is required'),
+});
+
+export const updateCareerScheam = createCareerSchema.partial().refine(data => Object.keys(data).length > 0, {
+	message: 'Please provide at least one field to update',
 });

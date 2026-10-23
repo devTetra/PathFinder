@@ -55,10 +55,11 @@ Question scoring configuration is excluded from the response.
 
 ### Careers
 
-| Method | Endpoint             | Description          |
-| ------ | -------------------- | -------------------- |
-| GET    | `/api/careers/`      | Get all careers      |
-| GET    | `/api/careers/:slug` | Get a career by slug |
+| Method | Endpoint               | Description                                 |
+| ------ | ---------------------- | ------------------------------------------- |
+| GET    | `/api/careers/`        | Get all careers                             |
+| GET    | `/api/careers/:slug`   | Get a career by slug                        |
+| GET    | `/api/careers/related` | Get related careers for a particular career |
 
 ### Assessments
 
