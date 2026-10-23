@@ -30,3 +30,15 @@ export type Result = {
     fit: number;
   }[];
 };
+
+export type Career = {
+  _id: string;
+  name: string;
+  slug: string;
+  shortDescription: string;
+  description: string;
+  illustrationKey: string;
+  skills: string[];
+  responsibilities: string[];
+  relatedCareers: string[];
+};

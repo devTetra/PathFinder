@@ -1,6 +1,9 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import {
+  getCareer,
+  getCareers,
   getQuestions,
+  getRelatedCareers,
   getResult,
   submitAssessment,
 } from "../services/server.service";
@@ -25,5 +28,25 @@ export const useSubmitAssessment = () => {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["assessment"] });
     },
+  });
+};
+
+export const useCareers = () => {
+  return useQuery({ queryKey: ["careers"], queryFn: getCareers });
+};
+
+export const useCareer = (slug: string) => {
+  return useQuery({
+    queryKey: ["careers", slug],
+    queryFn: () => getCareer(slug),
+    enabled: Boolean(slug),
+  });
+};
+
+export const useRelatedCareers = (slugs: string[]) => {
+  return useQuery({
+    queryKey: ["realted-careers", slugs],
+    queryFn: () => getRelatedCareers(slugs),
+    enabled: slugs.length > 0,
   });
 };

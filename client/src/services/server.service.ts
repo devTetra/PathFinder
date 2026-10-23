@@ -1,32 +1,52 @@
 import { api } from "../lib/axios";
-import type { Answer, Question, Result } from "../types";
+import type { Answer, Career, Question, Result } from "../types";
 
-interface apiResponse<T> {
+interface apiResponses<T> {
   success: boolean;
   data: T[];
   message: string;
 }
 
-interface resultResponse {
+interface apiResponse<T> {
   success: boolean;
-  data: Result;
+  data: T;
   message: string;
 }
 
 export const getQuestions = async (): Promise<Question[]> => {
-  const response = await api.get<apiResponse<Question>>("/questions/");
+  const response = await api.get<apiResponses<Question>>("/questions/");
   return response.data.data;
 };
 
 export const getResult = async (resultId: string): Promise<Result> => {
-  const response = await api.get<resultResponse>(`/results/${resultId}`);
+  const response = await api.get<apiResponse<Result>>(`/results/${resultId}`);
   return response.data.data;
 };
 
 export const submitAssessment = async (data: {
   answers: Answer[];
 }): Promise<Result> => {
-  const response = await api.post<resultResponse>("/assessment/submit", data);
+  const response = await api.post<apiResponse<Result>>(
+    "/assessment/submit",
+    data,
+  );
+  return response.data.data;
+};
 
+export const getCareers = async (): Promise<Career[]> => {
+  const response = await api.get<apiResponses<Career>>("/careers/");
+  return response.data.data;
+};
+
+export const getCareer = async (slug: string): Promise<Career> => {
+  const response = await api.get<apiResponse<Career>>(`/careers/${slug}`);
+  return response.data.data;
+};
+
+export const getRelatedCareers = async (slugs: string[]): Promise<Career[]> => {
+  const response = await api.post<apiResponses<Career>>(
+    "/careers/related",
+    slugs,
+  );
   return response.data.data;
 };

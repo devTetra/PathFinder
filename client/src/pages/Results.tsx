@@ -11,7 +11,6 @@ import {
 
 import type { RIASEC } from "../types";
 import { useResult } from "../hooks/useServer";
-import { Spinner } from "../components/Spinner";
 import { ErrorState } from "../components/ErrorState";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 import { ResultsSkeleton } from "../components/ResultSkeleton";
