@@ -1,291 +1,123 @@
 # PathFinder 2.0 — Client
 
-The PathFinder client is the frontend application for PathFinder 2.0.
+PathFinder is a career exploration application that helps users discover potential career paths through a RIASEC-based career interest assessment. Users can explore their career profiles, review personalized career matches, and browse available careers independently of taking the assessment.
 
-It provides the user-facing interface for taking the career assessment, viewing results, exploring career profiles, and sharing assessment results.
+The application is built with React and TypeScript, with a separate backend responsible for assessment scoring and career matching.
 
-## Responsibilities
+## Features
 
-The client is responsible for:
-
-- Rendering the user interface
-- Displaying assessment questions
-- Managing assessment interaction
-- Validating user selections
-- Submitting assessment responses
-- Displaying assessment progress
-- Displaying assessment results
-- Presenting career matches
-- Displaying career profiles
-- Rendering career illustrations
-- Providing result-sharing functionality
-- Handling client-side routing
-- Managing loading and error states
-- Providing responsive layouts
-
-The client should not contain the authoritative career-matching algorithm. Score calculation and career matching are handled by the server.
+- **Career Assessment:** Complete a 20-question assessment with five answer options per question and track progress throughout the process.
+- **RIASEC Profile:** View assessment scores across the six Holland personality dimensions: Realistic, Investigative, Artistic, Social, Enterprising, and Conventional.
+- **Personalized Career Matches:** Explore ranked career recommendations based on assessment results, including career fit information.
+- **Shareable Results:** Share results through a unique result URL without exposing assessment scores in URL query parameters.
+- **Career Explorer:** Browse the supported career dataset without completing the assessment.
+- **Career Details:** View individual career profiles, including illustrations, descriptions, relevant skills, responsibilities, and related careers.
+- **Responsive Interface:** Access the application across desktop, tablet, and mobile screen sizes.
+- **Loading and Error States:** Handle loading, empty, invalid, and unavailable data states throughout the application.
 
 ## Technology Stack
 
 - React
 - TypeScript
 - Vite
-- React Router
 - Tailwind CSS
+- React Router
 - TanStack Query
-- React Hook Form
-- Zod
+- Axios
 - Lucide React
 
-## Application Structure
+## Getting Started
 
-The client is organized around application responsibilities rather than a large number of unnecessary abstractions.
+### Prerequisites
 
-A high-level structure is:
+- Node.js
+- npm
+- Access to the PathFinder backend API
 
-```text
-client/
-│
-├── public/
-│   └── images/
-│       └── careers/
-│
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── constants/
-│   ├── hooks/
-│   ├── layouts/
-│   ├── lib/
-│   ├── pages/
-│   ├── routes/
-│   ├── schemas/
-│   ├── services/
-│   ├── types/
-│   ├── utils/
-│   ├── App.tsx
-│   └── main.tsx
-│
-├── .env
-├── .env.example
-├── index.html
-├── package.json
-├── tsconfig.json
-└── vite.config.ts
-```
+### Installation
 
-The exact structure may evolve during development.
+1. Clone the client repository.
 
-## Main Pages
+   ```bash
+   git clone <client-repository-url>
+   cd <client-directory>
+   ```
 
-The application is expected to contain the following major pages:
+2. Install the dependencies.
 
-### Home
+   ```bash
+   npm install
+   ```
 
-Introduces PathFinder and allows the user to begin the assessment.
+3. Configure the API base URL in the Axios client to point to your local backend or deployed API.
 
-### Assessment
+4. Start the development server.
 
-Contains the 20-question RIASEC assessment.
+   ```bash
+   npm run dev
+   ```
 
-The assessment should:
+5. Open the local URL provided by Vite in your browser.
 
-- Display one question at a time
-- Display exactly five options
-- Track progress
-- Prevent invalid submissions
-- Allow navigation where appropriate
-- Submit the completed responses to the server
+### Production Build
 
-### Results
-
-Displays the user's assessment profile and career matches.
-
-The results page may contain:
-
-- Overall assessment summary
-- RIASEC dimension scores
-- Strongest dimensions
-- Top career matches
-- Career profile
-- Share functionality
-- Retake assessment action
-
-### Careers
-
-Displays all supported career fields.
-
-Users can browse the available career profiles without taking the assessment.
-
-### Career Profile
-
-Displays detailed information about a specific career.
-
-A profile can contain:
-
-- Career name
-- Description
-- Illustration
-- RIASEC profile
-- Career dimensions
-- Additional career information
-
-## Assessment State
-
-Assessment answers should be maintained on the client while the user progresses through the questionnaire.
-
-The client should submit the completed answers to the server rather than calculating the authoritative result itself.
-
-This prevents the frontend from becoming the source of truth for the assessment algorithm.
-
-## API Communication
-
-API requests should be isolated from UI components through service functions.
-
-For example:
-
-```text
-pages
-  ↓
-hooks
-  ↓
-services
-  ↓
-API
-```
-
-Components should not contain large blocks of direct HTTP logic.
-
-## Server State
-
-TanStack Query can be used for server state such as:
-
-- Questions
-- Careers
-- Assessment submission
-- Results
-- Career profiles
-
-Local UI state should remain local when it does not need server synchronization.
-
-## Routing
-
-The client should use application routes such as:
-
-```text
-/
- /assessment
- /results/:resultId
- /careers
- /careers/:careerSlug
-```
-
-The exact result-sharing route may be adjusted during implementation.
-
-## Result Persistence
-
-Assessment results are intended to remain available for a limited period.
-
-The client should not rely solely on React state because refreshing the page would otherwise lose the result.
-
-The result identifier can be stored locally so that the application can restore the result after a refresh.
-
-The server remains responsible for determining whether the result is still valid.
-
-Once a result expires, the client should direct the user toward taking the assessment again.
-
-## Result Sharing
-
-Results should be shareable through a dedicated result URL.
-
-The URL should identify the result without exposing the user's scores in query parameters.
-
-For example:
-
-```text
-/results/64f8c...
-```
-
-rather than:
-
-```text
-/results?realistic=72&investigative=85...
-```
-
-The server retrieves the result associated with the identifier.
-
-## Illustrations
-
-Career illustrations are static client assets.
-
-Example:
-
-```text
-public/
-└── images/
-    └── careers/
-        ├── doctor.svg
-        ├── software-developer.svg
-        ├── lawyer.svg
-        └── ...
-```
-
-The career dataset stores the corresponding public path.
-
-For example:
-
-```text
-/images/careers/doctor.svg
-```
-
-The client is therefore responsible for serving the visual asset while the server stores only the reference to it.
-
-## Environment Variables
-
-Client environment variables should contain only values that are safe to expose to the browser.
-
-For example:
-
-```env
-VITE_API_URL=http://localhost:5000/api
-```
-
-Secrets must never be stored in client-side environment variables.
-
-## Development
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-Build the application:
+Build the application for production:
 
 ```bash
 npm run build
 ```
 
-Preview the production build:
+To preview the production build locally:
 
 ```bash
 npm run preview
 ```
 
-## Client Development Principles
+## Application Architecture
 
-- Keep components focused
-- Avoid unnecessary abstraction
-- Keep API calls outside presentation components
-- Use TypeScript types consistently
-- Keep assessment scoring logic authoritative on the server
-- Keep static assets in the client
-- Provide useful loading and error states
-- Design mobile-first and responsive layouts
-- Keep accessibility in consideration
+PathFinder is divided into a client and a server.
+
+The client is responsible for presenting the interface, collecting assessment answers, communicating with the API, and displaying results and career information.
+
+The server is responsible for managing assessment and career data, validating submissions, calculating RIASEC scores, ranking career matches, and managing result persistence and expiration.
+
+This separation keeps assessment scoring and career-matching logic on the server rather than duplicating the calculations in the client.
+
+Career illustrations are stored in the client repository and mapped to illustration keys returned by the API.
+
+## Assessment Model
+
+The assessment uses six RIASEC dimensions:
+
+| Dimension | Description   |
+| --------- | ------------- |
+| R         | Realistic     |
+| I         | Investigative |
+| A         | Artistic      |
+| S         | Social        |
+| E         | Enterprising  |
+| C         | Conventional  |
+
+Users answer the assessment questions without being shown the underlying scoring dimensions. Once the assessment is submitted, the server calculates the scores and returns the resulting career matches.
+
+PathFinder is intended for career exploration and educational guidance. Its recommendations are intended to help users explore possibilities, not to provide a definitive career-placement decision or psychological diagnosis.
+
+## Deployment
+
+The client can be deployed to Vercel or another platform that supports static frontend applications.
+
+For production deployment:
+
+- Configure the API base URL to use the deployed backend.
+- Ensure the backend allows requests from the deployed client origin.
+- Configure the hosting platform to serve the single-page application correctly for direct navigation to routes such as career details and shared results.
+
+## Related Repository
+
+- **Backend:** [PathFinder](https://github.com/devTetra/PathFinder)
+
+The backend source is maintained in the `v2-development` branch.
+
+## License
+
+No license has been specified for this project.

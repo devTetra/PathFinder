@@ -1,33 +1,37 @@
 # PathFinder 2.0
 
-PathFinder is a career exploration and assessment platform that helps users discover career fields that align with their interests, preferences, and personality.
+PathFinder is a full-stack career exploration platform that helps users discover career fields aligned with their interests through a structured assessment based on the **RIASEC career-interest framework**.
 
-PathFinder 2.0 is a complete rebuild of the original PathFinder project. It replaces the original static HTML/CSS/JavaScript implementation with a structured full-stack application and introduces a more robust career assessment model based on the **RIASEC career-interest framework**.
+Version 2.0 is a rebuild of the original static HTML, CSS, and JavaScript application. It introduces a React-based client, a TypeScript and Express API, MongoDB-backed career data, multidimensional assessment scoring, and career matching.
+
+**Live application:** [PathFinder 2.0](https://path-finder-three-virid.vercel.app/)
 
 ## Overview
 
-PathFinder 2.0 allows a user to:
+PathFinder 2.0 allows users to:
 
-- Take a 20-question career assessment
-- Answer five options per question
-- Receive scores across the six RIASEC dimensions
-- See their strongest career-interest dimensions
-- Receive career matches based on their assessment profile
-- Explore detailed career profiles
-- View career illustrations
-- Share their assessment results
-- Retake the assessment
-- Browse all supported career fields
+- Complete a 20-question career-interest assessment.
+- Answer each question using five available options.
+- Receive normalized scores across the six RIASEC dimensions.
+- Explore their strongest career-interest dimensions.
+- View ranked career matches based on their assessment profile.
+- Browse available career fields.
+- View detailed career profiles, including descriptions, skills, responsibilities, and illustrations.
+- Discover related careers.
+- Share assessment results through a generated result URL.
+- Retake the assessment.
 
-The application does **not require user authentication**. Assessment results are intended to be temporary rather than permanently associated with an account.
+The application does not require user authentication. Assessment results are stored and retrieved through the backend rather than being encoded directly into the shareable URL.
+
+PathFinder is an exploratory career-interest tool, not a definitive career-placement system or a substitute for professional career counseling.
 
 ## RIASEC Assessment
 
-PathFinder 2.0 uses the six RIASEC dimensions:
+PathFinder uses the six dimensions of the RIASEC career-interest framework.
 
 | Code | Dimension     | Description                                             |
 | ---- | ------------- | ------------------------------------------------------- |
-| R    | Realistic     | Hands-on, practical, technical, and physical activities |
+| R    | Realistic     | Practical, hands-on, technical, and physical activities |
 | I    | Investigative | Research, analysis, problem-solving, and discovery      |
 | A    | Artistic      | Creativity, expression, originality, and design         |
 | S    | Social        | Helping, teaching, supporting, and working with people  |
@@ -38,114 +42,104 @@ PathFinder 2.0 uses the six RIASEC dimensions:
 
 - **20 questions**
 - **5 options per question**
-- Options can contribute to multiple RIASEC dimensions
-- Primary contributions use stronger scores
-- Secondary contributions represent weaker associations
-- RIASEC dimensions are not exposed to the user while taking the assessment
+- Options can contribute to multiple RIASEC dimensions.
+- Primary contributions receive stronger scores than secondary contributions.
+- RIASEC dimensions are not displayed to users while they take the assessment.
+- Each dimension receives a normalized score from 0 to 100.
 
-The assessment produces a normalized score from **0–100** for each dimension.
-
-Conceptually:
+The score normalization is conceptually represented as:
 
 ```text
 Dimension Score =
 (User points for dimension / Maximum possible points for dimension) × 100
 ```
 
-Career matching then compares the user's dimension scores against the expected RIASEC profile of each career.
+The backend handles score calculation and career matching, keeping the assessment logic separate from the client interface.
 
 ## Career Matching
 
-Each supported career contains a RIASEC profile describing the expected score range for each dimension.
+Each supported career has a RIASEC profile describing its expected interest pattern across the six dimensions.
 
-PathFinder compares a user's assessment profile with these career profiles to determine how well the career fits the user's interests.
+PathFinder compares a user's normalized assessment scores with career profiles to produce a ranked list of potential matches.
 
-The matching system considers:
+The matching process considers:
 
-- The user's normalized RIASEC scores
-- The target range for each career dimension
-- The relative importance of each RIASEC dimension to the career
-- The distance between the user's score and the career's preferred range
+- The user's normalized RIASEC scores.
+- The target range for each career dimension.
+- The relative importance of each dimension to a career.
+- The distance between the user's scores and a career's preferred ranges.
 
-The result is a ranked list of career matches rather than a single deterministic career recommendation.
+The results present multiple possible career matches rather than assigning one definitive career to a user.
 
-> PathFinder is an exploratory career-interest tool and is not intended to provide professional psychological, educational, or career counseling.
+## Career Exploration
 
-## Results
+Users can browse the available career dataset and open dedicated career profile pages.
 
-After completing the assessment, users receive:
+Career profiles include relevant information such as:
 
-### Primary Result
+- Career name and category.
+- Description.
+- RIASEC profile and career dimensions.
+- Relevant skills and responsibilities.
+- Career illustration.
+- Related careers.
 
-The user's strongest career-interest profile and the career fields that best match it.
+The backend provides career data through the API, while the client displays the information and handles navigation between career profiles.
 
-### Career Matches
+## Assessment Results and Sharing
 
-Multiple careers are ranked according to their compatibility with the user's RIASEC profile.
+After completing the assessment, users can view their interest profile and ranked career matches.
 
-### Career Profile
+Results can be shared through a generated URL that identifies the stored assessment result. The RIASEC scores are not placed directly in the URL as query parameters.
 
-Each career has a dedicated profile containing relevant information such as:
-
-- Career name
-- Career category
-- Description
-- RIASEC profile
-- Career dimensions
-- Illustration
-- Relevant information about the field
-
-### Sharing
-
-Assessment results can be shared through a generated shareable result URL.
-
-The URL does **not contain the user's RIASEC scores as query parameters**.
-
-Results are temporary and are not permanently tied to a user account.
+The application does not require an account to access the assessment. Result storage and retrieval are handled by the backend; results are not permanently associated with a user account.
 
 ## Illustrations
 
 Career illustrations are stored as static assets in the client application.
 
-The career dataset stores the **public path/URL to the illustration**, rather than storing the image itself inside MongoDB.
-
-This keeps the database responsible for career data while the client repository remains responsible for static visual assets.
+The career dataset references each illustration through its public path or URL instead of storing the image itself in MongoDB. This separates career information from the client-side visual assets.
 
 ## Architecture
 
-PathFinder 2.0 is divided into two applications:
+PathFinder 2.0 separates the client interface from the backend API.
 
 ```text
 PathFinder 2.0
-├── client
-└── server
+├── Client
+│   ├── Assessment interface
+│   ├── Results and career matching display
+│   ├── Career explorer
+│   ├── Career profile pages
+│   └── Static illustrations
+│
+└── Server
+    ├── Career and question data
+    ├── Assessment scoring
+    ├── Career matching
+    ├── Result storage and retrieval
+    ├── API validation
+    └── Database access
 ```
 
-### Client
+### Client Responsibilities
 
-The client is responsible for:
+- Rendering the user interface.
+- Managing the assessment experience and client-side state.
+- Displaying assessment results and career matches.
+- Browsing careers and viewing career details.
+- Displaying related careers.
+- Providing the result-sharing interface.
+- Serving career illustrations.
 
-- User interface
-- Assessment experience
-- Client-side state
-- Results presentation
-- Career browsing
-- Career profile pages
-- Sharing interface
-- Static illustrations
+### Server Responsibilities
 
-### Server
-
-The server is responsible for:
-
-- Assessment data
-- Career data
-- Score calculation
-- Career matching
-- Result persistence
-- Result retrieval
-- API validation
-- Database access
+- Managing career and question data.
+- Validating API requests.
+- Calculating assessment scores.
+- Matching assessment profiles with careers.
+- Storing and retrieving assessment results.
+- Interacting with MongoDB.
 
 ## Technology Stack
 
@@ -157,8 +151,7 @@ The server is responsible for:
 - React Router
 - Tailwind CSS
 - TanStack Query
-- Zod
-- React Hook Form
+- Axios
 - Lucide React
 
 ### Server
@@ -170,29 +163,26 @@ The server is responsible for:
 - Mongoose
 - Zod
 
-## Project Structure
+## Deployment
 
-```text
-PathFinder/
-│
-├── client/
-│   ├── public/
-│   └── src/
-│
-├── server/
-│   └── src/
-│
-└── README.md
-```
+- **Client:** [Vercel](https://path-finder-three-virid.vercel.app/)
+- **Server:** Render
+- **Database:** MongoDB
+
+The client communicates with the backend through an API base URL configured using the `VITE_BASE_URL` environment variable. The client appends `/api` to this base URL, so the environment variable should contain the server's base URL without the `/api` suffix.
+
+Environment variables should be configured separately for each application and deployment environment.
 
 ## Development
 
-Clone the repository and install dependencies separately for the client and server.
+Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/devTetra/PathFinder.git
 cd PathFinder
 ```
+
+Install dependencies and run the client and server from their respective project directories.
 
 ### Client
 
@@ -200,6 +190,18 @@ cd PathFinder
 cd client
 npm install
 npm run dev
+```
+
+Configure the client environment with the backend's base URL:
+
+```env
+VITE_BASE_URL=<your-server-base-url>
+```
+
+Do not append `/api` to this value when using the Axios configuration:
+
+```ts
+baseURL: `${import.meta.env.VITE_BASE_URL}/api`;
 ```
 
 ### Server
@@ -210,49 +212,44 @@ npm install
 npm run dev
 ```
 
-Environment variables are configured separately for the client and server.
+Configure the required server environment variables for the database connection and other server settings before starting the API.
+
+> The commands above assume the client and server directories exist in the same repository. If they are maintained in separate repositories, clone and configure each repository independently.
 
 ## Version History
 
-### v1.0
+### v1.0 — Original Version
 
-The original PathFinder implementation.
-
-The first version was built using:
+The original implementation used:
 
 - HTML
 - CSS
 - Vanilla JavaScript
 
-The assessment consisted of a static questionnaire and returned a single career category based on the selected options.
+It presented a static questionnaire and returned a career category based on the selected answers.
 
-### v2.0
+### v2.0 — Full-Stack Rebuild
 
-PathFinder 2.0 is a complete architectural and functional rebuild.
+Version 2.0 introduces:
 
-Major changes include:
+- A React and TypeScript client.
+- An Express and TypeScript backend.
+- MongoDB-backed career and question data.
+- A 20-question RIASEC assessment.
+- Multidimensional question scoring.
+- Normalized scores across six RIASEC dimensions.
+- Career matching and ranked results.
+- Shareable assessment results.
+- Career browsing and detailed career profiles.
+- Related-career discovery.
+- Career illustrations served as client-side static assets.
+- API validation and separation of client and server responsibilities.
+- A responsive interface and dedicated loading and error states.
 
-- React-based client
-- TypeScript
-- Express backend
-- MongoDB
-- RIASEC assessment model
-- Multidimensional question scoring
-- Normalized 0–100 dimension scores
-- Career matching
-- Career profiles
-- Shareable results
-- Persistent static career data
-- Career illustrations
-- Improved responsive UI
-- Separation between client and server responsibilities
+## Project Status
 
-## Status
-
-PathFinder 2.0 is currently under development.
-
-The assessment model, career dataset, UI, API architecture, and matching algorithm are being developed before the final production implementation.
+PathFinder 2.0 has been deployed, with the client hosted on Vercel and the backend hosted on Render. The project may continue to receive improvements to its interface, assessment experience, career dataset, and matching functionality.
 
 ## License
 
-This project is currently a personal portfolio project.
+This is a personal portfolio project. No open-source license is specified at this time.
